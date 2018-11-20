@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   padding: 0;
@@ -11,4 +13,32 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.titles {
+  font-family: 'Arvo', serif;
+  font-size: 40px;
+  color: grey;
+
+}
+
+.titleDiv {
+  /* position: fixed; */
+  /* align-self: end; */
+  /* justify-content: flex-end; */
+  /* border-left: 50px; */
+  /* padding-left: 50px; */
+  margin: 10px 0px;
+  padding: 20px;
+  width: 100%;
+}
+
+
+.mover {
+  position: fixed;
+  left:300px;
+  top:150px;
+  margin: 10px 0px;
+  padding: 20px;
 }

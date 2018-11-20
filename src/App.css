@@ -1,5 +1,10 @@
+
+* {
+  background-color: black;
+}
 .App {
   text-align: center;
+  background-color: black;
 }
 
 .App-logo {
@@ -29,4 +34,61 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  display: flex;
+  float: left;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+   align-items: flex-start;
+   align-content: flex-start;
+}
+
+.item {
+  flex: .5;
+  float: left;
+  padding: 10px;
+}
+
+.navbar {
+  padding: 50px;
+  text-align: center;
+
+}
+
+
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+.logo-title {
+  padding-top: 30px;
+  padding-left: 10px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+}
+
+.logo-container:hover {
+  animation: bounce 1s;
+}
+
+.home {
+  color: white;
 }
