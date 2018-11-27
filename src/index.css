@@ -15,12 +15,41 @@ code {
     monospace;
 }
 
+.button {
+  padding: 20px;
+  margin: 20px;
+}
 
 .titles {
   font-family: 'Arvo', serif;
   font-size: 40px;
   color: grey;
+  z-index: 1;
+  width: 220px;
+}
 
+.ui-inverted-primary-button{
+  font-size: 20px;
+}
+
+.main-title {
+  font-size: 40px;
+  background-color: rgb(26,28,29);
+}
+
+.home {
+  background-color: rgb(26,28,29);
+  display: inline-block;
+  color: white;
+  position: fixed;
+   top: 50%;
+   left: 50%;
+   margin-top: -170px;
+   margin-left: -180px;
+}
+
+#reset {
+  margin-left: 140px;
 }
 
 .titleDiv {
@@ -29,16 +58,78 @@ code {
   /* justify-content: flex-end; */
   /* border-left: 50px; */
   /* padding-left: 50px; */
-  margin: 10px 0px;
   padding: 20px;
-  width: 100%;
+  margin-left:280px;
+  margin-top:150px;
+}
+
+.text {
+  font-size: 18px;
 }
 
 
 .mover {
   position: fixed;
-  left:300px;
-  top:150px;
-  margin: 10px 0px;
-  padding: 20px;
+  margin: 0px;
+  padding: 5px;
+  height: 100%;
+  border-right: solid white 5px;
+
+}
+
+.welcome {
+  position: fixed;
+  float: right;
+  margin-left: 590px;
+  margin-top: 40px;
+  height: 100%;
+  margin-right: 5px;
+  padding-right: 5px;
+
+}
+
+.welcomeTextParent{
+  color: lightblue;
+  font-family: 'Arvo', serif;
+}
+
+.ui-inverted-segment{
+  background: #1B1C1D;
+}
+
+.buttonTerminalParent {
+  position: fixed;
+  height: 100%;
+  margin-bottom: 50;
+  margin-left: 25;
+}
+
+.buttonTerminalChild {
+  position: fixed;
+  height: 100%;
+  margin-top: 820;
+  margin-left: 25;
+}
+
+.promptText{
+  color: white;
+  position: fixed;
+  padding: 5px;
+  width: 30%;
+  border-right-style: solid;
+  border-right-color: white;
+  border-right-width: 3px;
+  height: 100%;
+  z-index: 1;
+}
+
+.prompt {
+  position: fixed;
+  height: 100%;
+
+}
+
+
+.problemFieldParent {
+
 }

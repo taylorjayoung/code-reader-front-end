@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LogoSeeds from './LogoSeeds'
+import { connect } from 'react-redux';
 
 
 class Logo extends Component {
@@ -43,10 +43,22 @@ class Logo extends Component {
       break
   }
 }
+
+logoSelector = (event) => {
+  event.preventDefault()
+  const data = {
+    selectedLanguage: event.target.id,
+    skillSelection: true
+  }
+  this.props.dispatch({
+    type:'SAVE_LANGUAGE_SELECTION',
+    payload: data});
+}
+
   render() {
     return (
-      <div className= 'logo-container' onClick={(event) => this.props.clicker(event)}>
-        <svg className ="item" id={this.props.id} viewBox="0 0 128 128" width='80px' height='80px' >
+      <div className= 'logo-container' id={this.props.id} onClick={(event) => this.logoSelector(event)}>
+        <svg className ="item"  pointerEvents="none" id={this.props.id}viewBox="0 0 128 128" width='80px' height='80px' >
           {this.pathFinder()}
         </svg>
         <p className='logo-title' >{this.props.name}</p>
@@ -55,7 +67,14 @@ class Logo extends Component {
   }
 }
 
-export default Logo;
+let mapStateToProps = (state) => {
+  return {
+    state
+  }
+}
+
+export default connect(mapStateToProps)(Logo);
+
 
 
 
