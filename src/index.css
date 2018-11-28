@@ -3,11 +3,14 @@
 body {
   margin: 0;
   padding: 0;
+
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Ubuntu";
+
 }
 
 code {
@@ -34,7 +37,11 @@ code {
 
 .main-title {
   font-size: 40px;
+  font-family: "Ubuntu", sans-serif;
   background-color: rgb(26,28,29);
+}
+.sub-title {
+  font-family: "Ubuntu", sans-serif;
 }
 
 .home {
@@ -45,12 +52,10 @@ code {
    top: 50%;
    left: 50%;
    margin-top: -170px;
-   margin-left: -180px;
+   margin-left: -190px;
 }
 
-#reset {
-  margin-left: 140px;
-}
+
 
 .titleDiv {
   /* position: fixed; */
@@ -100,15 +105,16 @@ code {
 .buttonTerminalParent {
   position: fixed;
   height: 100%;
+  width: 250px;
   margin-bottom: 50;
-  margin-left: 25;
+  margin-left: 125;
 }
 
 .buttonTerminalChild {
-  position: fixed;
-  height: 100%;
-  margin-top: 820;
-  margin-left: 25;
+  position: relative;
+  height: 100px;
+  padding-left: -15px;
+  padding-top: 30px;
 }
 
 .promptText{
@@ -121,6 +127,8 @@ code {
   border-right-width: 3px;
   height: 100%;
   z-index: 1;
+  overflow-y: auto;
+
 }
 
 .prompt {
@@ -131,5 +139,33 @@ code {
 
 
 .problemFieldParent {
+  color: white;
+  position: fixed;
+  padding: 5px;
+  width: 30%;
+  height: 100%;
+  z-index: 1;
+}
 
+.quizContainer {
+  height: 100%;
+  position: fixed;
+  margin-left: 950px;
+  margin-bottom: 220px;
+  width: 350px;
+  background-color: gray;
+  border: solid white 5px;
+  border-radius: 3px;
+}
+
+.questionWrapperBody {
+  width: 250px;
+}
+
+button.answerButton {
+  width: 150px;
+}
+
+article {
+    font-family: "Ubuntu";
 }

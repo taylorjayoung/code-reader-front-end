@@ -15,7 +15,6 @@ class LogoContainer extends Component {
       return (
         <div id='selectedLanguageContainer'>
         <Logo key={idv} id={idv} name={language[idv]} />
-        <button className="ui inverted primary button, small ui button" id='reset' onClick={(event)=>this.submitHandler(event)}>Reset</button>
         {this.props.state.language.skillSelection ? <Skill />: null}
         </div>
       )

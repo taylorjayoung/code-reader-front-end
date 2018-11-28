@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import '../../App.css';
-
+import { connect } from 'react-redux';
+import Resource from './Resource'
 
 
 class PromptContainer extends Component {
+
+  resourceFinder = () => {
+    return this.props.state.category.selectedCategories.map(category => {
+      return <Resource key={category.label} category={category} />
+    })
+  }
   render() {
     return (
       <div className="promt">
@@ -19,16 +26,19 @@ class PromptContainer extends Component {
         <p>Below are some resources that will get you on track should you get stuck. </p>
         <br></br>
         <h3>Resources</h3>
-
-        <ul>
-          <li>Resource 1</li>
-          <li>Resource 2</li>
-          <li>Resource 3</li>
-        </ul>
+          <div>
+            {this.resourceFinder()}
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default PromptContainer;
+let mapStateToProps = (state) => {
+  return {
+    state
+  }
+}
+
+export default connect(mapStateToProps)(PromptContainer);

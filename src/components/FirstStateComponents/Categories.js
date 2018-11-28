@@ -25,8 +25,9 @@ class Categories extends Component {
       <div className='categoryParentDiv'>
         <div className='categoryChildDiv'>
           <CategorySelector selector={this.categorySetter}/>
-          {this.props.state.category.submitButton ? <SubmitButton /> : null}
         </div>
+        {this.props.state.category.submitButton ? <SubmitButton /> : null}
+
       </div>
     );
   }
