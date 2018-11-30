@@ -12,7 +12,6 @@ class Javascript extends Component {
     return (
       <div className="problemFieldParent">
         <div className='problemFieldChild'>
-          <p>Problems Here</p>
           <div>
               <AceEditor
               mode="ruby"

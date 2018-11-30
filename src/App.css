@@ -94,7 +94,7 @@ body {
 
 
 #test {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   font-size: 20px;
   text-align: center;
 }
@@ -193,10 +193,102 @@ body {
 }
 
 .problemFieldParent {
-  position: fixed;
-  margin-left: 400px;
+  position: relative;
+  margin-left: 32%;
+  height: 100%;
+  width: 76%;
+  margin-top: -671px;
+  background-color: white;
+  border-radius: 4px;
+  padding-top: 20px;
+}
+
+#blah2 {
+  position: relative;
+  width: 90% !important;
+  height: 651px !important;
+  border: 2px gray solid;
+  border-radius: 10px;
 }
 
 .reset {
   z-index: 1;
+}
+
+.take-quiz-button-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-right: 110px;
+  z-index: 10;
+}
+.quiz-button-container {
+  position: absolute;
+  bottom: 0;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.contributorPage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+
+.submitYourCode{
+  position: absolute;
+  bottom: 40px;
+  margin-left: 45%;
+}
+
+#compare-instructions {
+  position: absolute;
+  width: 230px;
+  margin-left: 41%;
+  top: 0;
+  margin-top: 15%
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contributorSubmitButton {
+  right: 10%;
+  position: absolute;
 }

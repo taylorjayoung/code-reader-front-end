@@ -1,20 +1,21 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
-import LogoContainer from './components/FirstStateComponents/LogoContainer'
-import NavBar from './components/FirstStateComponents/NavBar'
-import InstructionDisplay from './components/FirstStateComponents/InstructionDisplay'
 import Home from './components/FirstStateComponents/Home'
 import ProblemDisplay from './components/ProblemDisplayFolder/ProblemDisplay'
 import FirstStateContainer from './FirstStateContainer'
+import Contributor from './components/Contributor/Contributor'
 import { connect } from 'react-redux';
 
 
 class App extends Component {
+  displayChecker = () => {
+    return this.props.state.display.selectedUserType === '1' ?  <FirstStateContainer /> : <Contributor />
+  }
 
   render() {
     return (
       <>
-        {this.props.state.display.problemDisplay ? <ProblemDisplay /> : <FirstStateContainer />  }
+        {this.props.state.display.homePage ? <Home /> : this.props.state.display.problemDisplay ? <ProblemDisplay /> : this.displayChecker()}
       < />
     );
   }

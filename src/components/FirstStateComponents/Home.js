@@ -23,6 +23,7 @@ class Home extends Component {
   render() {
     return (
       <div className="homeContainer">
+      {console.log('loade')}
         <div className="home">
           <h1 className='main-title'>Welcome To Bit Book </h1>
           <h2 className='sub-title'>Are You Here To </h2>

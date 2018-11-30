@@ -24,24 +24,30 @@ code {
 }
 
 .titles {
+  position: absolute;
   font-family: 'Arvo', serif;
   font-size: 40px;
   color: grey;
   z-index: 1;
   width: 220px;
+  margin-left: -120px;
 }
 
 .ui-inverted-primary-button{
   font-size: 20px;
+  margin-left: 20px;
 }
 
 .main-title {
   font-size: 40px;
+  margin-right: 50px;
   font-family: "Ubuntu", sans-serif;
   background-color: rgb(26,28,29);
 }
 .sub-title {
   font-family: "Ubuntu", sans-serif;
+  position: relative;
+  margin-left: 110px;
 }
 
 .home {
@@ -51,8 +57,8 @@ code {
   position: fixed;
    top: 50%;
    left: 50%;
-   margin-top: -170px;
-   margin-left: -190px;
+   margin-top: -150px;
+   margin-left: -210px;
 }
 
 
@@ -64,8 +70,8 @@ code {
   /* border-left: 50px; */
   /* padding-left: 50px; */
   padding: 20px;
-  margin-left:280px;
-  margin-top:150px;
+  margin-left:50%;
+  margin-top:50%;
 }
 
 .text {
@@ -75,7 +81,8 @@ code {
 
 .mover {
   position: fixed;
-  margin: 0px;
+  width: 280px;
+  margin-left: 280px;
   padding: 5px;
   height: 100%;
   border-right: solid white 5px;
@@ -101,6 +108,9 @@ code {
 .ui-inverted-segment{
   background: #1B1C1D;
 }
+.ui.segment {
+  margin-left: 20px;
+}
 
 .buttonTerminalParent {
   position: fixed;
@@ -109,6 +119,7 @@ code {
   margin-bottom: 50;
   margin-left: 125;
 }
+
 
 .buttonTerminalChild {
   position: relative;
@@ -119,9 +130,9 @@ code {
 
 .promptText{
   color: white;
-  position: fixed;
+  position: relative;
   padding: 5px;
-  width: 30%;
+  width: 100%;
   border-right-style: solid;
   border-right-color: white;
   border-right-width: 3px;
@@ -132,30 +143,51 @@ code {
 }
 
 .prompt {
-  position: fixed;
+  position: relative;
+  width: 29%;
   height: 100%;
-
 }
 
 
 .problemFieldParent {
-  color: white;
-  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
   padding: 5px;
   width: 30%;
   height: 100%;
   z-index: 1;
 }
 
+.promptText{
+  color: white;
+  position: relative;
+  padding: 5px;
+  width: 100%;
+  border-right-style: solid;
+  border-right-color: white;
+  border-right-width: 3px;
+  height: 100%;
+  z-index: 1;
+  overflow-y: auto;
+
+}
+
 .quizContainer {
   height: 100%;
-  position: fixed;
-  margin-left: 950px;
-  margin-bottom: 220px;
-  width: 350px;
+  position: relative;
+  width: 32%;
+  background-color: white;
+  border: solid black 5px;
+  border-radius: 4px;
+}
+
+.quiz {
+  height: 100%;
+  position: absolute;
+  width: 100%;
   background-color: gray;
   border: solid white 5px;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .questionWrapperBody {
@@ -168,4 +200,68 @@ button.answerButton {
 
 article {
     font-family: "Ubuntu";
+}
+
+.confirm-editor-parent {
+  position: absolute;
+  top: 0;
+  right:0;
+  padding: 10px;
+}
+
+.confirm-editor-child {
+  position: relative;
+  margin-left: 2%;
+  margin-top: 3%;
+  padding: 10px;
+}
+
+#ace-editor {
+  height: 600px;
+}
+
+.contributorEditorParent{
+  position: relative;
+  margin-left: 2%;
+  margin-top: 2%;
+  padding: 10px;
+}
+
+#contributorTextParent {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  color: black;
+}
+
+.contributor.language.button{
+  position: relative;
+  margin-top: 560px;
+  margin-left: 570px;
+}
+
+#contributorTextChild {
+  position: relative;
+  max-width: 650px;
+}
+
+.item {
+
+  border-radius: 5px;
+}
+
+.error {
+  background-color:  red;
+}
+
+.active {
+  background-color: green;
+}
+
+.redux-quiz {
+  position: absolute;
+  top: 20%;
+  margin-left: 60%;
+  width: 30%;
+  border: black solid;
 }

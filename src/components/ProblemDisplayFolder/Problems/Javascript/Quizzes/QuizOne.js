@@ -14,13 +14,13 @@ export const quiz = {
       "correctAnswer": "4"
     },
     {
-      "question": "What needs to have been added in order to see the information we wanted in our div?",
+      "question": "What function needs to have been utilized in order to see the information in our div?",
       "questionType": "text",
       "answers": [
-        "document.appendChild()",
-        "document.createElement(HTMLObjectInfo)",
-        "HTMLObject.appendChild(HTMLObjectInfo)",
-        "document.addElement(document.createChild(HTMLObject))"
+        ".create(Child)",
+        ".createElement()",
+        ".appendChild()",
+        ".append(Element)"
       ],
       "correctAnswer": "3"
     }

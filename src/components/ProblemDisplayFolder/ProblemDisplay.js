@@ -10,26 +10,25 @@ import Ruby from './LanguageComponents/Ruby'
 
 class ProblemDisplay extends Component {
 
-  displayFunction = () => {
+  problemDisplayFunction = () => {
     const languageIndex = this.props.state.language.selectedLanguage
     const languagesArray = this.props.state.language.languages
     const lang  = languagesArray[languageIndex][languageIndex]
 
-    if (lang === "Javascript"){
-      return <Javascript />
-    }
+    if (lang === "Javascript")
+    {return  <Javascript /> }
+    else { return <Ruby />  }
+  }
 
-    else {
-      return <Ruby />
-    }
+  promptDisplayFunction = () => {
+    return this.props.state.quiz.takingQuiz ? <QuizComponent /> : <PromptContainer /> 
   }
 
   render() {
     return (
       <div className="ProblemContainer">
-        <PromptContainer />
-        {this.displayFunction()}
-        <QuizComponent />
+        {this.promptDisplayFunction()}
+        {this.problemDisplayFunction()}
       </div>
     );
   }

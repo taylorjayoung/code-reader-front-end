@@ -6,12 +6,28 @@ import ProblemText from '../Problems/Javascript/CodeEditorValues/ProblemOne'
 // Import a Theme (okadia, github, xcode etc)
 import 'brace/theme/twilight';
 import { connect } from 'react-redux';
-
+import { Button, Segment } from 'semantic-ui-react'
 
 class Javascript extends Component {
-  // selectEditorInformationToDisplay = () => {
-  //   this.props.state.skill.selectedSkillLevel
-  // }
+  takeQuiz = (event) => {
+    event.preventDefault()
+    if(!this.props.state.quiz.takingQuiz){
+        const data = {
+          takingQuiz: true,
+        }
+        this.props.dispatch({
+          type:'QUIZ_SELECT',
+          payload: data});
+      }
+    }
+
+  goHome = (event) => {
+    event.preventDefault()
+      this.props.dispatch({
+          type:'RESET',
+        });
+    }
+
 
   render() {
     return (
@@ -43,6 +59,10 @@ class Javascript extends Component {
               }}
               />
           </div>
+        </div>
+        <div className='take-quiz-button-container'>
+          <button className="ui white button, small ui button" id={1} onClick={(event)=>this.goHome(event)}>Home</button>
+          <button className="ui primary button, small ui button" id={2} onClick={(event)=>this.takeQuiz(event)}>Take Quiz</button>
         </div>
       </div>
     );

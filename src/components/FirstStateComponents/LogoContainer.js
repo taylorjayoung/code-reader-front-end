@@ -18,7 +18,7 @@ class LogoContainer extends Component {
         {this.props.state.language.skillSelection ? <Skill />: null}
         </div>
       )
-      }
+    }
 
     else return Object.keys(logoPathsObj).map(function(key, index) {
       return <Logo key={key} id={logoPathsObj[key]} name={key} />

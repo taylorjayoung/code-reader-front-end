@@ -46,14 +46,36 @@ class Logo extends Component {
 
 logoSelector = (event) => {
   event.preventDefault()
-  const data = {
-    selectedLanguage: event.target.id,
-    skillSelection: true
+  if(this.props.state.display.selectedUserType === "1"){
+    const data = {
+      selectedLanguage: event.target.id,
+      skillSelection: true
+    }
+    this.props.dispatch({
+      type:'SAVE_LANGUAGE_SELECTION',
+      payload: data});
   }
-  this.props.dispatch({
-    type:'SAVE_LANGUAGE_SELECTION',
-    payload: data});
-}
+  else if (this.props.state.display.selectedUserType === "2"){
+
+    if(event.target.style.backgroundColor !== ""){
+      event.target.style.backgroundColor = ""
+    }
+    else {
+       event.target.style.backgroundColor = 'rgb(44,133,207)'
+    }
+
+    event.target.style.borderRadius = '5px'
+    event.target.style.width = '200px'
+    const data = {
+      readInstructions: true,
+      contributorLanguage: event.target.id
+    }
+    this.props.dispatch({
+      type:'SAVE_CONTRIBUTOR_LANGUAGE',
+      payload: data});
+    }
+  }
+
 
   render() {
     return (
@@ -80,4 +102,4 @@ export default connect(mapStateToProps)(Logo);
 
 
 
-// <SlideOut />
+  // <SlideOut />

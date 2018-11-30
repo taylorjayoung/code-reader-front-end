@@ -13,7 +13,7 @@ class PromptContainer extends Component {
   }
   render() {
     return (
-      <div className="promt">
+      <div className="prompt">
         <div className='promptText'>
         <article>
           <h2>Title</h2>
