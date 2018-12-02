@@ -7,11 +7,13 @@ class SubmitButton extends Component {
  renderProblems =(event) =>{
     event.preventDefault()
     const data = {
-      problemDisplay: true,
+      problemContainerDisplay: true,
     }
     this.props.dispatch({
-      type:'RENDER_PROBLEMS',
+      type:'RENDER_PROBLEMS_CONTAINER',
       payload: data});
+      //SUNDAY: Find out how to set state to display problem container
+      // where should the components go, how should the dispatches be rearranged?
   }
 
  resetPreferences =(event) => {

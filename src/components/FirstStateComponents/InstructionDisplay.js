@@ -4,8 +4,8 @@ import SubmitButton from './SubmitButton'
 
 
 class InstructionDisplay extends Component {
-  displayFinder = (props) => {
 
+  displayFinder = (props) => {
     if(props.state.skill.selectedSkillLevel){
       return(
         <>

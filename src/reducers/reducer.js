@@ -5,6 +5,7 @@ import skillReducer from './skillReducer'
 import categoryReducer from './categoryReducer'
 import quizReducer from './quizReducer'
 import contributorReducer from './contributorReducer'
+import problemsReducer from './problemsReducer'
 import {reducer as formReducer} from 'redux-form'
 const appReducer = combineReducers({
   display: displayReducer,
@@ -13,7 +14,8 @@ const appReducer = combineReducers({
   category: categoryReducer,
   quiz: quizReducer,
   contributor: contributorReducer,
-  form: formReducer
+  form: formReducer,
+  problems: problemsReducer
 })
 
 const rootReducer = (state, action) => {

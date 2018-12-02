@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
 import Home from './components/FirstStateComponents/Home'
-import ProblemDisplay from './components/ProblemDisplayFolder/ProblemDisplay'
+import ProblemsContainerDisplay from './components/ProblemDisplayFolder/ProblemsContainerDisplay'
 import FirstStateContainer from './FirstStateContainer'
 import Contributor from './components/Contributor/Contributor'
 import { connect } from 'react-redux';
@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <>
-        {this.props.state.display.homePage ? <Home /> : this.props.state.display.problemDisplay ? <ProblemDisplay /> : this.displayChecker()}
+        {this.props.state.display.homePage ? <Home /> : this.props.state.display.problemContainerDisplay ? <ProblemsContainerDisplay /> : this.displayChecker()}
       < />
     );
   }

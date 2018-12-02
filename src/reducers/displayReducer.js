@@ -17,11 +17,11 @@ const displayReducer = (state = initialState, action) => {
           selectedUserType: action.payload.selectedUserType,
           logoSelection: action.payload.logoSelection,
           homePage: false});
-    case 'RENDER_PROBLEMS':
+    case 'RENDER_PROBLEMS_CONTAINER':
       return Object.assign(
           {},
           state,{
-          problemDisplay: action.payload.problemDisplay,
+          problemContainerDisplay: action.payload.problemContainerDisplay,
           });
     default:
       return state;

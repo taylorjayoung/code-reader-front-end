@@ -292,3 +292,16 @@ body {
   right: 10%;
   position: absolute;
 }
+
+.problemDisplayDiv {
+  position: relative;
+  width:100%;
+  background-color: white;
+  padding: 10px;
+  border: black solid;
+}
+
+.ProblemContainerChild {
+  display: flex;
+  flex-direction: column;
+}
