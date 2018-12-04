@@ -10,7 +10,7 @@ class ProblemsContainerDisplay extends Component {
 
   fetchProblems = () => {
 
-    fetch('http://localhost:3000/api/v1/problems')
+    fetch('http://localhost:3001/api/v1/problems')
     .then(r => r.json())
     .then(r => this.props.dispatch({
             type:'FETCH_PROBLEMS',
@@ -20,7 +20,8 @@ class ProblemsContainerDisplay extends Component {
 
   displayProblems = () => {
     return this.props.state.problems.problems.map(problem =>{
-      return ( <ListComponent key={problem.id} problem={problem}/>)}
+      const uuidv1 = require('uuid/v1');
+      return <ListComponent key={uuidv1()} problem={problem}/>}
       )}
 
   render() {

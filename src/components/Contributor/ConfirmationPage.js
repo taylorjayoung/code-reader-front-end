@@ -9,8 +9,9 @@ class ConfirmationPage extends Component {
     debugger
   }
   submitProblemToBackend = (event) => {
+    debugger
     event.preventDefault()
-    fetch('http://localhost:3000/api/v1/problems', {
+    fetch('http://localhost:3001/api/v1/problems', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -19,7 +20,12 @@ class ConfirmationPage extends Component {
       body: JSON.stringify({
         problem: {
           code: this.props.state.contributor.contributorCode,
-          quiz: this.props.state.contributor.contributorQuizJSON
+          quiz: this.props.state.contributor.contributorQuizJSON,
+          title: this.props.state.contributor.problemTitle,
+          difficulty_id: parseInt(this.props.state.contributor.contributorSkillId),
+          language_id: parseInt(this.props.state.contributor.contributorLanguage),
+          category_id: parseInt(this.props.state.contributor.contributorCategoryId),
+          contributor_id: 1
         }
       })
     }).then(response => response.json())

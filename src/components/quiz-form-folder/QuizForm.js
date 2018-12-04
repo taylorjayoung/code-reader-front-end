@@ -18,7 +18,6 @@ class QuizForm extends Component {
   </div>
 );
 
-
 const renderSelectField = ({ input, label, type, meta: { touched, error }, children }) => (
   <div>
     <label>{label}</label>
@@ -119,7 +118,7 @@ const renderQuestions = ({ fields, meta: { touched, error, submitFailed } }) => 
   const { handleSubmit, pristine, reset, submitting } = this.props;
 
     return (
-      <div className="QuizForm">
+      <div className='inputField'>
          <form name="quiz-form" onSubmit={handleSubmit}>
 	      <Field
 	        name="quizTitle"

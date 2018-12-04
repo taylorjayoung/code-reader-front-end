@@ -5,9 +5,12 @@ const initialState = {
   contributorCode: '',
   contributorQuiz: null,
   contributorLanguage: null,
+  contributorSkillId: null,
+  contributorCategoryId: null,
   displayQuizForm: false,
   contributorQuizJSON: null,
-  quizSubmitted: false
+  quizSubmitted: false,
+  problemTitle: null
 }
 
 const displayReducer = (state = initialState, action) => {
@@ -42,6 +45,27 @@ const displayReducer = (state = initialState, action) => {
             contributorQuizJSON: action.payload.contributorQuizJSON,
             quizSubmitted: action.payload.quizSubmitted,
             displayQuizForm: action.payload.displayQuizForm
+
+          });
+    case 'SAVE_CATEGORY_ID':
+      return Object.assign(
+          {},
+          state,{
+            contributorCategoryId: action.payload.contributorCategoryId
+
+          });
+    case 'SAVE_SKILL_ID':
+      return Object.assign(
+          {},
+          state,{
+            contributorSkillId: action.payload.contributorSkillId
+
+          });
+    case 'SAVE_PROBLEM_TITLE':
+      return Object.assign(
+          {},
+          state,{
+            problemTitle: action.payload.problemTitle
 
           });
     default:

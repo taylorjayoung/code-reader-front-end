@@ -49,18 +49,18 @@ class SkillCard extends Component {
         {
           this.state.showMenu
             ? (
-              <div
+              <select
                 className="menu"
                 ref={(element) => {
                   this.dropdownMenu = element;
                 }}
               >
-                <button onClick={() => this.setState({difficulty: 'Easy'})}> Easy </button>
-                <button onClick={() => this.setState({difficulty: 'Medium'})}> Medium </button>
-                <button onClick={() => this.setState({difficulty: 'Hard'})}> Hard </button>
-                <button onClick={() => this.setState({difficulty: 'Advanced'})}> Advanced </button>
-                <button onClick={() => this.setState({difficulty: 'Impossible'})}> Impossible </button>
-              </div>
+                <option onClick={() => this.setState({difficulty: 'Easy'})}> Easy </option>
+                <option onClick={() => this.setState({difficulty: 'Medium'})}> Medium </option>
+                <option onClick={() => this.setState({difficulty: 'Hard'})}> Hard </option>
+                <option onClick={() => this.setState({difficulty: 'Advanced'})}> Advanced </option>
+                <option onClick={() => this.setState({difficulty: 'Impossible'})}> Impossible </option>
+              </select>
             )
             : (
               null

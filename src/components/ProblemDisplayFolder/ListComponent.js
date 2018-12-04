@@ -19,14 +19,49 @@ class ListComponent extends Component {
       payload: data});
   }
 
+  // displayInfo = () => {
+  //   const cat = this.props.problem.category_id -1
+  //   const lang = this.props.problem.language_id -1
+  //   const diff = this.props.problem.difficulty_id -1
+  //   return(
+  //     <div className='problemDescriptionItem'>
+  //       <div className ='problemItemTitle'> <h1>{this.props.problem.title} </h1></div>
+  //       <div className ='problemItemInfo' ><h2>Category - {Object.values(this.props.state.category.categories[cat])[0]} </h2>
+  //       <h2>Difficulty - {Object.values(this.props.state.skill.skills[diff])[0]} </h2>
+  //       <h2>Language - {Object.values(this.props.state.language.languages[lang])[0]} </h2> </div>
+  //     </div>
+  //   )
+  // }
+  displayInfo = () => {
+    const cat = this.props.problem.category_id -1
+    const lang = this.props.problem.language_id -1
+    const diff = this.props.problem.difficulty_id -1
+    return(
+      <div className='problemDescriptionItem'>
+        <button type="button" class="list-group-item list-group-item-action">
+          <div className ='problemItemTitle'> <h1>{this.props.problem.title} </h1></div>
+          <div className ='problemItemInfo' ><p>Category - {Object.values(this.props.state.category.categories[cat])[0]} </p>
+          <p>Difficulty - {Object.values(this.props.state.skill.skills[diff])[0]} </p>
+          <p>Language - {Object.values(this.props.state.language.languages[lang])[0]} </p> </div>
+        </button>
+
+      </div>
+    )
+  }
+
+  // <div>
+  // {this.displayInfo()}
+  // </div>
   render() {
     return (
       <div className='problemDisplayDiv' onClick={(event) => this.renderProblem(event)}>
-        <h1>Title - {this.props.problem.title} </h1>
-        <h1>Category - {this.props.problem.category_id} </h1>
-        <h1>Author - {this.props.problem.contributor_id} </h1>
-        <h1>Difficult - {this.props.problem.difficulty_id} </h1>
-        <h1>Language - {this.props.problem.language_id} </h1>
+
+        <div className="list-group">
+          <button type="button" class="list-group-item list-group-item-action active" disabled>
+          </button>
+          {this.displayInfo()}
+
+          </div>
       </div>
     );
   }

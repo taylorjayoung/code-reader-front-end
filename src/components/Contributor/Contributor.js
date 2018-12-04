@@ -15,8 +15,6 @@ class Contributor extends Component {
   }
   render(){
   return(<>
-    <NavBar />
-
     <div className="contributorPage">
       {this.props.state.contributor.readInstructions ? <ContributorInstructionPage /> : null}
       {this.props.state.contributor.submitProblem ? <ContributorCodeEditor /> : null}

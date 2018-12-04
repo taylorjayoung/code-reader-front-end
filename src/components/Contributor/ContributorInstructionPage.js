@@ -7,7 +7,6 @@ import NoLanguageSelectedModal from '../ModalConductor/NoLanguageSelected'
 
 class ContributorInstructionPage extends Component {
   createProblem = (event) => {
-    debugger
     event.preventDefault()
     if(!this.props.state.contributor.contributorLanguage)
       return <NoLanguageSelectedModal />
@@ -21,21 +20,19 @@ class ContributorInstructionPage extends Component {
         payload: data});}
     }
 
-
-
-
   render(){
 
   return(<>
-    <NavBar />
-
     <div className="contributorInstructionsPage">
-      <div className='submit-a-problem'>
-        <WelcomeContributor />
-        <LogoContainer />
-
-        <button className="ui primary button, big ui button, contributor language button" id={1} onClick={(event)=>this.createProblem(event)}>Submit A Problem</button>
-      </div>
+    <div id='contributor-logo-container'>
+      <LogoContainer />
+    </div>
+    <div id='contributor-welcome-message-container'>
+      <WelcomeContributor />
+    </div>
+    <div className='submit-a-problem'>
+      <button className="ui primary button, medium ui button, contributor language button" id={1} onClick={(event)=>this.createProblem(event)}>Submit A Problem</button>
+    </div>
     </div>
   < />)
   }

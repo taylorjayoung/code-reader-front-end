@@ -17,7 +17,6 @@ class Quiz extends Component {
   }
 
   render() {
-    {debugger}
     let quiz = this.props.quiz;
     let questions = quiz.questions;
     return (
