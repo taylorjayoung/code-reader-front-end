@@ -8,6 +8,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-ace": "^6.2.0",
+    "react-bootstrap": "^0.32.4",
+    "react-bootstrap-dropdown-menu": "^1.1.15",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.6.3",
     "react-quiz-component": "^0.2.0",
@@ -15,9 +17,11 @@
     "react-reveal": "^1.2.2",
     "react-scripts": "2.1.1",
     "react-select": "^2.1.2",
+    "reactstrap": "^6.5.0",
     "redux": "^4.0.1",
     "redux-form": "^7.4.2",
-    "semantic-ui-react": "^0.83.0"
+    "semantic-ui-react": "^0.83.0",
+    "uuid": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,6 +39,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "case-sensitive-paths-webpack-plugin": "^2.1.2",
     "gulp-build": "^0.5.3",
     "gulp-install": "^1.1.0",
     "restart": "^2.0.0",

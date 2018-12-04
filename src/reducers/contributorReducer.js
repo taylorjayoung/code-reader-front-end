@@ -5,7 +5,9 @@ const initialState = {
   contributorCode: '',
   contributorQuiz: null,
   contributorLanguage: null,
-  displayQuizForm: false
+  displayQuizForm: false,
+  contributorQuizJSON: null,
+  quizSubmitted: false
 }
 
 const displayReducer = (state = initialState, action) => {
@@ -39,7 +41,7 @@ const displayReducer = (state = initialState, action) => {
           state,{
             contributorQuizJSON: action.payload.contributorQuizJSON,
             quizSubmitted: action.payload.quizSubmitted,
-            displayQuizForm: false,
+            displayQuizForm: action.payload.displayQuizForm
 
           });
     default:

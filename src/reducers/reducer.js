@@ -6,6 +6,7 @@ import categoryReducer from './categoryReducer'
 import quizReducer from './quizReducer'
 import contributorReducer from './contributorReducer'
 import problemsReducer from './problemsReducer'
+import preferenceReducer from './preferenceReducer'
 import {reducer as formReducer} from 'redux-form'
 const appReducer = combineReducers({
   display: displayReducer,
@@ -15,7 +16,8 @@ const appReducer = combineReducers({
   quiz: quizReducer,
   contributor: contributorReducer,
   form: formReducer,
-  problems: problemsReducer
+  problems: problemsReducer,
+  preference: preferenceReducer
 })
 
 const rootReducer = (state, action) => {

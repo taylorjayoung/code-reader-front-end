@@ -240,13 +240,13 @@ body {
 .submitYourCode{
   position: absolute;
   bottom: 40px;
-  margin-left: 45%;
+  margin-left: 55%;
 }
 
 #compare-instructions {
   position: absolute;
-  width: 230px;
-  margin-left: 41%;
+  width: 20%;
+  margin-left: 51%;
   top: 0;
   margin-top: 15%
 }
@@ -304,4 +304,14 @@ body {
 .ProblemContainerChild {
   display: flex;
   flex-direction: column;
+}
+
+.problem-settings-container {
+  border-radius: 10px;
+  background-color: red;
+  max-width: 250px;
+}
+.problem-settings-container-child {
+  border-radius: 10px;
+  background-color: red;
 }

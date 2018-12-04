@@ -10,7 +10,7 @@ class ProblemsContainerDisplay extends Component {
 
   fetchProblems = () => {
 
-    fetch('http://localhost:4000/api/v1/problems')
+    fetch('http://localhost:3000/api/v1/problems')
     .then(r => r.json())
     .then(r => this.props.dispatch({
             type:'FETCH_PROBLEMS',
@@ -19,9 +19,7 @@ class ProblemsContainerDisplay extends Component {
   }
 
   displayProblems = () => {
-    debugger
     return this.props.state.problems.problems.map(problem =>{
-      console.log(problem)
       return ( <ListComponent key={problem.id} problem={problem}/>)}
       )}
 

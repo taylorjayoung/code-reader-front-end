@@ -11,6 +11,7 @@ class ListComponent extends Component {
     event.preventDefault()
     const data = {
       selectedProblem: this.props.problem.id,
+      quizJSONToDisplay: this.props.problem.quiz,
       problemDisplay: true
     }
     this.props.dispatch({

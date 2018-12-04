@@ -4,6 +4,10 @@ import 'brace/mode/javascript';
 import brace from 'brace';
 import 'brace/theme/twilight';
 import { connect } from 'react-redux';
+import CategoryCard from '../DropDownComponents/CategoryDropdown';
+import SkillCard from '../DropDownComponents/SkillCard'
+import { DropdownMenu, MenuItem } from 'react-bootstrap-dropdown-menu';
+import Logo from '../FirstStateComponents/Logo'
 
 class ContributorCodeEditor extends Component {
   state = {
@@ -27,6 +31,35 @@ class ContributorCodeEditor extends Component {
       payload: data});
   }
 
+  // mapCategories = () => {
+  //   return this.props.state.category.categories.map(category =>  {
+  //      return <MenuItem text={category[Object.keys(category)]} />
+  //   }
+  // }
+
+  mapCategories = () => {
+    return this.props.state.category.categories.map(category => {
+      const uuidv1 = require('uuid/v1');
+
+    })
+  }
+
+  mapCategories = () => {
+    return this.props.state.category.categories.map(category => {
+      return category[Object.keys(category)]
+    })
+  }
+
+  showLogo = () => {
+    const language = this.props.state.language.languages[this.props.state.contributor.contributorLanguage]
+    const idv = Object.keys(language)[0]
+    return (
+        <Logo key={idv} id={idv} name={language[idv]} />
+      )
+  }
+clickHandler = () => {
+  debugger
+}
 
   render() {
     return (
@@ -61,41 +94,19 @@ class ContributorCodeEditor extends Component {
           </div>
         </div>
       </div>
-      <div className="confirm-editor-parent">
-        <div className='confirm-editor-child'>
-          <div id='confirming-editor' style={{height: '500px', width: '500px'}}>
-              <AceEditor
-              mode="javascript"
-              theme="twilight"
-              name="blah2"
-              onLoad={this.onLoad}
-              onChange={this.onChange}
-              fontSize={14}
-              showPrintMargin={true}
-              showGutter={true}
-              highlightActiveLine={true}
-              editorProps={{
-                  $blockScrolling: true
-              }}
-              value={this.state.code}
-
-            setOptions={{
-              resize: true,
-              enableBasicAutocompletion: true,
-              enableLiveAutocompletion: true,
-              enableSnippets: false,
-              showLineNumbers: true,
-              tabSize: 2,
-              }}
-              />
-          </div>
-        </div>
-      </div>
       <div id='compare-instructions'>
         <h3>1. Paste Your Code In The Editor On The Left</h3>
-        <h3>2. Then Confirm The Code Matches On The Right</h3>
-        <h3>3. Edit The Code On The Right If It Doesn't Match</h3>
-        <h2>4. Submit Your Code!</h2>
+        <h3>2. Then Fill in The Settings On The Right</h3>
+        <h2>3. Submit Your Code!</h2>
+      </div>
+      <div className="problem-settings-container">
+        <div className='problem-settings-container-child'>
+          <SkillCard />
+          <CategoryCard />
+        </div>
+      </div>
+      <div id='selectedLogoDisplay'>
+        {this.showLogo()}
       </div>
       <div className='submitYourCode'>
         <button className="ui primary button, big ui button" id={1} onClick={(event)=>this.submitState(event)}>Submit</button>

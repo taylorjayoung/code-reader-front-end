@@ -7,6 +7,7 @@ import NoLanguageSelectedModal from '../ModalConductor/NoLanguageSelected'
 
 class ContributorInstructionPage extends Component {
   createProblem = (event) => {
+    debugger
     event.preventDefault()
     if(!this.props.state.contributor.contributorLanguage)
       return <NoLanguageSelectedModal />

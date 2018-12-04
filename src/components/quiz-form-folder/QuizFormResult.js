@@ -13,12 +13,14 @@ class QuizFormResult extends Component {
   storeState = (json) => {
       const data = {
         contributorQuizJSON: json,
-        quizSubmitted: true
+        quizSubmitted: true,
+        displayQuizForm: false
       }
       this.props.dispatch({
         type:'QUIZ_SUBMITTED',
         payload: data});
   }
+
 
 
   render() {

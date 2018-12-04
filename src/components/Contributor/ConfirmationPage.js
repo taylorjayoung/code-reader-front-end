@@ -10,9 +10,26 @@ class ConfirmationPage extends Component {
   }
   submitProblemToBackend = (event) => {
     event.preventDefault()
-    this.props.dispatch({
+    fetch('http://localhost:3000/api/v1/problems', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        problem: {
+          code: this.props.state.contributor.contributorCode,
+          quiz: this.props.state.contributor.contributorQuizJSON
+        }
+      })
+    }).then(response => response.json())
+    .then(response =>
+    {
+      debugger
+    })
+    .then( r =>   this.props.dispatch({
       type:'RESET'
-    });
+    }))
   }
 
   render(){

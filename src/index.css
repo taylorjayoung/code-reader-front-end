@@ -202,18 +202,20 @@ article {
     font-family: "Ubuntu";
 }
 
-.confirm-editor-parent {
+.problem-settings-container {
   position: absolute;
   top: 0;
   right:0;
   padding: 10px;
+  background-color: white;
 }
 
-.confirm-editor-child {
+.problem-settings-container-child {
   position: relative;
   margin-left: 2%;
   margin-top: 3%;
   padding: 10px;
+  background-color:white;
 }
 
 #ace-editor {
@@ -264,4 +266,13 @@ article {
   margin-left: 60%;
   width: 30%;
   border: black solid;
+}
+
+#selectedLogoDisplay {
+  position: absolute;
+  float: right;
+  bottom: 20%;
+  margin-left:57%;
+  pointer-events: none;
+  width: 10%;
 }

@@ -28,6 +28,12 @@ class Javascript extends Component {
         });
     }
 
+    problemCode = () => {
+      const problemIndex = this.props.state.problems.selectedProblem
+      const problem = this.props.state.problems.problems[problemIndex -1]
+      return problem.code
+    }
+
 
   render() {
     return (
@@ -47,7 +53,7 @@ class Javascript extends Component {
               editorProps={{
                   $blockScrolling: true
               }}
-              value={ProblemText()}
+              value={this.problemCode()}
 
             setOptions={{
               resize: true,

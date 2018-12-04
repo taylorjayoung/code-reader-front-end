@@ -25,7 +25,7 @@ class QuizComponent extends Component {
     return (
       <div className="quizContainer">
         <div id="quiz">
-        <Quiz quiz={quiz}/>
+        <Quiz quiz={JSON.parse(this.props.state.problems.quizJSONToDisplay)}/>
         <div className='quiz-button-container'>
           {this.buttonCheck()}
         </div>

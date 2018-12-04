@@ -14,14 +14,14 @@ class ProblemDisplay extends Component {
     const languageIndex = this.props.state.language.selectedLanguage
     const languagesArray = this.props.state.language.languages
     const lang  = languagesArray[languageIndex][languageIndex]
-
+    
     if (lang === "Javascript")
     {return  <Javascript /> }
     else { return <Ruby />  }
   }
 
   promptDisplayFunction = () => {
-    return this.props.state.quiz.takingQuiz ? <QuizComponent /> : <PromptContainer /> 
+    return this.props.state.quiz.takingQuiz ? <QuizComponent /> : <PromptContainer />
   }
 
   render() {
