@@ -30,11 +30,12 @@ class ProblemsContainerDisplay extends Component {
       return <ListComponent key={uuidv1()} problem={problem}/>}
       )}
 
-  resetState = (event) => {
-    event.preventDefault()
-      this.props.dispatch({
-          type:'RESET',
-        });
+  resetState = () => {
+    return (dispatch) => {
+      dispatch({
+        type:'RESET'
+      })
+    }
   }
 
   selectLogo = (data) => {
