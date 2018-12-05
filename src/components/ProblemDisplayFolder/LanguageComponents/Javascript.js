@@ -31,8 +31,20 @@ class Javascript extends Component {
     problemCode = () => {
       const problemIndex = this.props.state.problems.selectedProblem
       const problem = this.props.state.problems.problems[problemIndex -1]
-      debugger
       return problem.code
+    }
+
+    goToProblemContainer = (event) => {
+      event.preventDefault()
+      const data = {
+        selectedProblem: null,
+        quizJSONToDisplay: null,
+        problemDisplay: false,
+        problemTitle: null
+      }
+      this.props.dispatch({
+        type:'RENDER_PROBLEM',
+        payload: data});
     }
 
 
@@ -69,6 +81,7 @@ class Javascript extends Component {
         </div>
         <div className='take-quiz-button-container'>
           <button className="ui white button, small ui button" id={1} onClick={(event)=>this.goHome(event)}>Home</button>
+          <button className="ui white button, small ui button" id={1} onClick={(event)=>this.goToProblemContainer(event)}>Problem List</button>
           <button className="ui primary button, small ui button" id={2} onClick={(event)=>this.takeQuiz(event)}>Take Quiz</button>
         </div>
       </div>

@@ -12,7 +12,8 @@ class ListComponent extends Component {
     const data = {
       selectedProblem: this.props.problem.id,
       quizJSONToDisplay: this.props.problem.quiz,
-      problemDisplay: true
+      problemDisplay: true,
+      problemTitle: this.props.problem.title
     }
     this.props.dispatch({
       type:'RENDER_PROBLEM',
@@ -34,11 +35,11 @@ class ListComponent extends Component {
   // }
   displayInfo = () => {
     const cat = this.props.problem.category_id -1
-    const lang = this.props.problem.language_id -1
+    const lang = this.props.problem.language_id
     const diff = this.props.problem.difficulty_id -1
     return(
       <div className='problemDescriptionItem'>
-        <button type="button" class="list-group-item list-group-item-action">
+        <button type="button" class="list-group-item list-group-item-primary">
           <div className ='problemItemTitle'> <h1>{this.props.problem.title} </h1></div>
           <div className ='problemItemInfo' ><p>Category - {Object.values(this.props.state.category.categories[cat])[0]} </p>
           <p>Difficulty - {Object.values(this.props.state.skill.skills[diff])[0]} </p>
@@ -57,7 +58,7 @@ class ListComponent extends Component {
       <div className='problemDisplayDiv' onClick={(event) => this.renderProblem(event)}>
 
         <div className="list-group">
-          <button type="button" class="list-group-item list-group-item-action active" disabled>
+          <button type="button" class="list-group-item list-group-item-primary" disabled>
           </button>
           {this.displayInfo()}
 

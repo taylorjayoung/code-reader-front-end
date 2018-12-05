@@ -2,7 +2,8 @@
 const initialState = {
   problems: [],
   selectedProblem: null,
-  quizJSONToDisplay: null
+  quizJSONToDisplay: null,
+  problemTitle: null
 }
 
 
@@ -20,7 +21,8 @@ const problemsReducer = (state = initialState, action) => {
           state,{
           selectedProblem: action.payload.selectedProblem,
           problemDisplay: true,
-          quizJSONToDisplay: action.payload.quizJSONToDisplay
+          quizJSONToDisplay: action.payload.quizJSONToDisplay,
+          problemTitle: action.payload.problemTitle
           });
     default:
       return state;

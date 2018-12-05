@@ -11,12 +11,18 @@ class PromptContainer extends Component {
       return <Resource key={category.label} category={category} />
     })
   }
+
+  propChecker ()  {
+    debugger
+  }
   render() {
     return (
       <div className="prompt">
+      {this.propChecker()}
         <div className='promptText'>
         <article>
-          <h2>Title</h2>
+
+          <h2 id='ProblemTitle'>{this.props.state.problems.problemTitle}</h2>
           <h3>Prompt</h3>
           <p>What output should be expected from the final function?</p>
           <h3>Background:</h3>
