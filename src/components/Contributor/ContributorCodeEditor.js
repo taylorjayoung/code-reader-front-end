@@ -60,6 +60,27 @@ class ContributorCodeEditor extends Component {
       payload: {problemTitle: event.target.value}
       });
   }
+  setNotes = (event) => {
+    event.preventDefault()
+    this.props.dispatch({
+      type:'SAVE_NOTES',
+      payload: {notes: event.target.value}
+    }, ()=> console.log(event.target.value));
+  }
+  setPrompt = (event) => {
+    event.preventDefault()
+    this.props.dispatch({
+      type:'SAVE_PROMPT',
+      payload: {prompt: event.target.value}
+      });
+  }
+  setDescription = (event) => {
+    event.preventDefault()
+    this.props.dispatch({
+      type:'SAVE_DESCRIPTION',
+      payload: {description: event.target.value}
+    }, ()=> console.log(event.target.value));
+  }
 
   // <div className="ui input" onChange={event => this.setDescription(event)}>
   //   <input type="text" placeholder="Description..." />
@@ -106,50 +127,58 @@ class ContributorCodeEditor extends Component {
         </div>
       </div>
       <div id='compare-instructions'>
-        <h3>1. Paste Your Code In The Editor On The Left</h3>
-        <h3>2. Then Fill in The Settings On The Right</h3>
-        <h2>3. Submit Your Code!</h2>
+        <h3 id='inst-header3'>1. Paste Your Code In The Editor On The Left</h3>
+        <h3 id='inst-header3'>2. Then Fill in The Settings On The Right</h3>
+        <h2 id='inst-header2'>3. Submit Your Code!</h2>
       </div>
       <div id='dropdownParentDiv'>
-        <div className="ui input" onChange={event => this.setTitle(event)}>
-          <input type="text" placeholder="Title..." />
-        </div>
+          <div id='dropdownChildDiv'>
+          <div>
+              <div className="ui input" onChange={event => this.setTitle(event)}>
+                <input type="text" id='titleField' placeholder="Title..." />
+              </div>
+              <div className="ui input" onChange={event => this.setPrompt(event)}>
+                <input type="text" id='promptField' placeholder="Prompt. What is the problem?" />
+              </div>
+              <div className="ui input" onChange={event => this.setNotes(event)}>
+                <input type="text" id='notesField' placeholder="Put any important notes." />
+              </div>
+              <div className="ui input" onChange={event => this.setDescription(event)}>
+                <input type="text" id='descriptionField' placeholder="Description. Describe the story behind the problem." />
+              </div>
+            </div>
 
-        <div id='difficultyDropdownDiv'>
-          <select onChange={(event) => this.setSkillIdFunction(event)} name="difficulty" className="ui selection dropdown" multiple="" id="multi-select">
-            <option value="" id='0'>Difficulty</option>
-            <option value="1" id='1'>Easy</option>
-            <option value="2" id='2'>Medium</option>
-            <option value="3" id='3'>Hard</option>
-            <option value="4" id='4'>Advanced</option>
-            <option value="5" id='5'>Impossible</option>
-          </select>
-        </div>
-        <div id='categoryDropdownDiv'>
-          <select onChange={(event) => this.setCategoryIdFunction(event)} name="category" className="ui selection dropdown">
-            <option value="" id='0'>Category</option>
-            <option value="2" id='1'>Guessing Output</option>
-            <option value="3" id='2'>Debugging</option>
-            <option value="4" id='3'>Execution Contexts</option>
-            <option value="5" id='4'>Breakpoints</option>
-            <option value="6" id='5'>Efficiency Improvements</option>
-            <option value="7" id='6'>Server Side</option>
-            <option value="1" id='7'>Context Based Problem Solving</option>
-          </select>
+            <div id='difficultyDropdownDiv'>
+              <select onChange={(event) => this.setSkillIdFunction(event)} name="difficulty" className="ui selection dropdown" multiple="" id="multi-select">
+                <option value="" id='0'>Difficulty</option>
+                <option value="1" id='1'>Easy</option>
+                <option value="2" id='2'>Medium</option>
+                <option value="3" id='3'>Hard</option>
+                <option value="4" id='4'>Advanced</option>
+                <option value="5" id='5'>Impossible</option>
+              </select>
+            </div>
+            <div id='categoryDropdownDiv'>
+              <select onChange={(event) => this.setCategoryIdFunction(event)} name="category" className="ui selection dropdown">
+                <option value="" id='0'>Category</option>
+                <option value="2" id='1'>Guessing Output</option>
+                <option value="3" id='2'>Debugging</option>
+                <option value="4" id='3'>Execution Contexts</option>
+                <option value="5" id='4'>Breakpoints</option>
+                <option value="6" id='5'>Efficiency Improvements</option>
+                <option value="7" id='6'>Server Side</option>
+                <option value="1" id='7'>Context Based Problem Solving</option>
+              </select>
+            </div>
         </div>
         <div className='submitYourCode'>
           <div id='logoAndSubmit'>
-            <div id='selectedLogoDisplay'>
-            {this.showLogo()}
-            </div>
             <div id='buttonDiv'>
-              <button className="ui primary button, big ui button" id={1} onClick={(event)=>this.submitState(event)}>Submit</button>
+              <button className="ui inverted red button, big ui button" id='ten' onClick={(event)=>this.submitState(event)}>Submit</button>
             </div>
           </div>
-
         </div>
       </div>
-
       < />
     );
   }

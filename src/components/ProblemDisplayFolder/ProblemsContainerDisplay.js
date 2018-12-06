@@ -30,31 +30,35 @@ class ProblemsContainerDisplay extends Component {
       return <ListComponent key={uuidv1()} problem={problem}/>}
       )}
 
-  resetState = (event) => {
+
+
+  languagesButtonHandler = (event) => {
+    event.preventDefault()
+    this.props.dispatch({
+      type: 'RESET'
+    }, () => {this.updateSelection()})
+
+
+  }
+  homeButtonHandler = (event) => {
     event.preventDefault()
       this.props.dispatch({
           type:'RESET',
         });
-  }
+    }
 
-  selectLogo = (data) => {
-      return this.props.dispatch({
-        type:'SAVE_HOME_SELECTION',
-        payload: data})
-  }
+  updateSelection = () => {
+    const data = {
+      selectedUserType: 1,
+      homePage: false,
+      logoSelection: true
+    }
 
-  languagesButtonHandler = (event) => {
-    event.preventDefault()
-    this.props.dispatch(this.resetState(event)).then(()=> {
-      const data = {
-        selectedUserType: 1,
-        homePage: false,
-        logoSelection: true
-      }
-
-      return this.props.dispatch(this.selectLogo(data))
+    this.props.dispatch({
+     type: 'SAVE_HOME_SELECTION',
     })
   }
+
 
   render() {
     return (
@@ -83,9 +87,9 @@ class ProblemsContainerDisplay extends Component {
           </div>
         </div>
       </div>
-      <div className="ProblemContainer">
+      <div className="ProblemListContainer">
         {this.props.state.problems.problems.length === 0 ? this.fetchProblems() : null}
-        <div className='ProblemContainerChild'>
+        <div className='ProblemListContainerChild'>
           {this.props.state.problems.selectedProblem ? <ProblemDisplay /> : this.displayProblems()}
         </div>
       </div>

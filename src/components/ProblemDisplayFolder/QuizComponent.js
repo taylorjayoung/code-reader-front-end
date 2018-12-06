@@ -6,10 +6,6 @@ import Question from '../../lib/Question';
 import { Button, Segment } from 'semantic-ui-react'
 import { connect } from 'react-redux';
 
-
-
-
-
 class QuizComponent extends Component {
   buttonCheck = () => {
     if(this.props.state.quiz.renderQuizDirectoryButtons){
@@ -21,11 +17,13 @@ class QuizComponent extends Component {
       )
     }
   }
+
+
   render() {
     return (
       <div className="quizContainer">
         <div id="quiz">
-          <Quiz quiz={JSON.parse(this.props.state.problems.quizJSONToDisplay)}/>
+          <Quiz quiz={this.props.state.problems.quizJSONToDisplay}/>
           <div className='quiz-button-container'>
             {this.buttonCheck()}
           </div>

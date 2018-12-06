@@ -26,7 +26,7 @@ class Home extends Component {
       <div className="homeContainer">
       {console.log('loade')}
         <div className="home">
-          <h1 className='main-title'>Welcome To Bit Book </h1>
+          <h1 className='main-title'>Bit Book </h1>
           <h2 className='sub-title'>Are You Here To </h2>
           <div className="ui inverted segment">
             <button className="ui inverted primary button, big ui button" id={1} onClick={(event)=>this.homeClickHandler(event)}>Read</button> <span className='text'> &nbsp; Or  &nbsp;&nbsp;</span>

@@ -18,6 +18,12 @@ const quizReducer = (state = initialState, action) => {
           state,{
           renderQuizDirectoryButtons: action.payload.renderQuizDirectoryButtons
         });
+    case 'RENDER_PROBLEM':
+      return Object.assign(
+          {},
+          state,{
+          takingQuiz: action.payload.takingQuiz
+        });
     default:
       return state;
   }

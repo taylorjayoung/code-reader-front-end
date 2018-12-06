@@ -27,7 +27,7 @@ class LogoContainer extends Component {
 
   render() {
     return (
-      <div className="container" >
+      <div className="first-state-logo-container" >
         {this.logoMapper(LogoSeeds)}
       </div>
     );

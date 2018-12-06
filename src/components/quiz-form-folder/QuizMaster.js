@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import QuizForm from './QuizForm';
 import QuizFormResult from './QuizFormResult';
+import { connect } from 'react-redux';
+import {quiz} from '../ProblemDisplayFolder/Problems/Javascript/Quizzes/QuizOne'
 
 class QuizFormMaster extends Component {
   constructor(props){
@@ -16,14 +18,45 @@ class QuizFormMaster extends Component {
 	  })
   }
 
+
+    storeState = (json) => {
+        const data = {
+          contributorQuizJSON: json,
+          quizSubmitted: true,
+          displayQuizForm: false
+        }
+        this.props.dispatch({
+          type:'QUIZ_SUBMITTED',
+          payload: data});
+    }
+
+  autofillQuiz = () => {
+      const data = {
+        contributorQuizJSON: quiz,
+        quizSubmitted: true,
+        displayQuizForm: false
+      }
+      this.props.dispatch({
+        type:'QUIZ_SUBMITTED',
+        payload: data});
+  }
+
   render() {
     return (
       <div className="QuizFormMaster">
        	<QuizForm onSubmit={this.setResult} />
+        <br></br>
+        <button className="ui primary button, medium ui button" id={2} onClick={(event)=>this.autofillQuiz(event)}>Autofill Default Quiz</button>
        	<QuizFormResult result={this.state.result}/>
       </div>
     );
   }
 }
 
-export default QuizFormMaster;
+const mapStateToProps = (state) => {
+  return {
+    state
+  }
+}
+
+export default connect(mapStateToProps)(QuizFormMaster);
