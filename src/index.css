@@ -26,14 +26,35 @@ code {
   margin: 20px;
 }
 
-.titles {
+.titles.language {
   position: absolute;
   font-family: 'Arvo', serif;
-  font-size: 40px;
+  font-size: 80px;
   color: grey;
-  z-index: 1;
   width: 220px;
-  margin-left: -120px;
+  margin-left: -250px;
+
+}
+.titles.skill{
+  position: absolute;
+  font-family: 'Arvo', serif;
+  font-size: 70px;
+  color: grey;
+  width: 220px;
+  margin-left: -170px;
+  text-align: center;
+
+
+}
+.titles.categories{
+  position: absolute;
+  font-family: 'Arvo', serif;
+  text-align: center;
+  font-size: 80px;
+  color: grey;
+  width: 220px;
+  margin-left: -250px;
+
 }
 
 .ui-inverted-primary-button{
@@ -42,21 +63,23 @@ code {
 }
 
 .main-title {
-  font-size: 40px;
-  margin-right: 50px;
+  font-size: 80px;
+  margin-left: -650px;
+  text-align: center;
   font-family: "Ubuntu", sans-serif;
   background-color: rgb(26,28,29);
 }
 .sub-title {
   font-family: "Ubuntu", sans-serif;
   position: relative;
-  margin-left: 110px;
+  margin-left: 85px;
 }
 
 .home {
   background-color: rgb(26,28,29);
   display: inline-block;
   color: white;
+  width: 1000px;
   position: fixed;
    top: 50%;
    left: 50%;
@@ -84,8 +107,8 @@ code {
 
 .mover {
   position: fixed;
-  width: 280px;
-  margin-left: 280px;
+  width: 380px;
+  margin-left: 450px;
   padding: 5px;
   height: 100%;
   border-right: solid white 5px;
@@ -95,24 +118,26 @@ code {
 .welcome {
   position: fixed;
   float: right;
-  margin-left: 590px;
-  margin-top: 40px;
+  margin-left: 890px;
+  margin-top: 50px;
   height: 100%;
   margin-right: 5px;
   padding-right: 5px;
+  max-width: 1000px;
 
 }
 
 .welcomeTextParent{
   color: lightblue;
   font-family: 'Arvo', serif;
+
 }
 
 .ui-inverted-segment{
   background: #1B1C1D;
 }
 .ui.segment {
-  margin-left: 55px;
+  margin-left: 35px;
 }
 
 .buttonTerminalParent {
@@ -154,11 +179,15 @@ code {
 
 .problemFieldParent {
   background-color: rgba(255, 255, 255, 0.9);
-  position: relative;
+  position: fixed;
   padding: 5px;
-  width: 30%;
+  width: 68%;
   height: 100%;
   z-index: 1;
+  top: 0;
+  margin-left: 600px;
+  margin-top: 5.2%;
+
 }
 
 .promptText{
@@ -178,7 +207,7 @@ code {
 .quizContainer {
   height: 100%;
   position: relative;
-  width: 32%;
+  width: 26%;
   background-color: white;
   border: solid black 5px;
   border-radius: 4px;
@@ -194,7 +223,9 @@ code {
 }
 
 .questionWrapperBody {
-  width: 250px;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10%;
 }
 
 button.answerButton {
@@ -272,16 +303,44 @@ article {
 }
 
 #selectedLogoDisplay {
-  position: flex;
-  bottom: 20%;
-  margin-left:5%;
+  margin-top: -6px;
   pointer-events: none;
-  width: 10%;
-  padding: 15px;
 }
 
 #buttonDiv {
-  position: flex;
-  left: 50%;
-  padding: 20px;
+  display: relative;
+  float:right;
+}
+
+#logoAndSubmit{
+  width: 300px;
+  display: flex;
+  height: 200px;
+}
+
+#difficultyDropdownDiv {
+  width: 100%;
+  padding: 1px;
+}
+
+#categoryDropdownDiv {
+  padding: 1px;
+  width: 100%;
+}
+
+#ten{
+  margin-top: 10px;
+  margin-left: 140px;
+  margin-right: 2%;
+}
+
+#problemEditor {
+  height: 100%;
+  width: 100%;
+}
+
+.problemFieldChild {
+  height: 46%;
+  width: 65%;
+  position: fixed;
 }

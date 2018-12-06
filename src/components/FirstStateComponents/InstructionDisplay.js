@@ -9,16 +9,16 @@ class InstructionDisplay extends Component {
     if(props.state.skill.selectedSkillLevel){
       return(
         <>
-      <h1 className='titles'>Choose Some Categories </h1>
+      <h1 className='titles categories'>Choose Some Categories</h1>
         < />
     )}
     else if(props.state.language.selectedLanguage){
       return (
-      <h1 className='titles'>Choose a Skill Level </h1>
+      <h1 className='titles skill'>Choose Skill Level</h1>
     )}
     else if(!props.state.display.homePage){
       return(
-        <h1 className='titles'>Choose a Language </h1>
+        <h1 className='titles language'>Choose Language</h1>
     )}
   }
 

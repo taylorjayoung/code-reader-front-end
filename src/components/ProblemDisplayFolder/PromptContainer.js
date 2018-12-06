@@ -11,14 +11,10 @@ class PromptContainer extends Component {
       return <Resource key={category.label} category={category} />
     })
   }
-
-  propChecker ()  {
-    debugger
-  }
+  
   render() {
     return (
       <div className="prompt">
-      {this.propChecker()}
         <div className='promptText'>
         <article>
 

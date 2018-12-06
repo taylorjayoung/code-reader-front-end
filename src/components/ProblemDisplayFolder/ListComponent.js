@@ -58,8 +58,7 @@ class ListComponent extends Component {
       <div className='problemDisplayDiv' onClick={(event) => this.renderProblem(event)}>
 
         <div className="list-group">
-          <button type="button" class="list-group-item list-group-item-primary" disabled>
-          </button>
+    
           {this.displayInfo()}
 
           </div>

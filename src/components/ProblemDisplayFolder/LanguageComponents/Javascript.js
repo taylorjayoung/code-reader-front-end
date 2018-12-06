@@ -40,7 +40,9 @@ class Javascript extends Component {
         selectedProblem: null,
         quizJSONToDisplay: null,
         problemDisplay: false,
-        problemTitle: null
+        problemTitle: null,
+        takingQuiz: false
+
       }
       this.props.dispatch({
         type:'RENDER_PROBLEM',
@@ -52,7 +54,7 @@ class Javascript extends Component {
     return (
       <div className="problemFieldParent">
         <div className='problemFieldChild'>
-          <div>
+          <div id='problemEditor'>
               <AceEditor
               mode="javascript"
               theme="twilight"
@@ -81,8 +83,8 @@ class Javascript extends Component {
         </div>
         <div className='take-quiz-button-container'>
           <button className="ui white button, small ui button" id={1} onClick={(event)=>this.goHome(event)}>Home</button>
-          <button className="ui white button, small ui button" id={1} onClick={(event)=>this.goToProblemContainer(event)}>Problem List</button>
-          <button className="ui primary button, small ui button" id={2} onClick={(event)=>this.takeQuiz(event)}>Take Quiz</button>
+          <button className="ui white button, small ui button" id={2} onClick={(event)=>this.goToProblemContainer(event)}>Problem List</button>
+          <button className="ui primary button, small ui button" id={3} onClick={(event)=>this.takeQuiz(event)}>Take Quiz</button>
         </div>
       </div>
     );

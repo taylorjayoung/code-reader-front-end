@@ -10,7 +10,10 @@ const initialState = {
   displayQuizForm: false,
   contributorQuizJSON: null,
   quizSubmitted: false,
-  problemTitle: null
+  problemTitle: null,
+  prompt: null,
+  description: null,
+  notes: null
 }
 
 const displayReducer = (state = initialState, action) => {
@@ -66,6 +69,27 @@ const displayReducer = (state = initialState, action) => {
           {},
           state,{
             problemTitle: action.payload.problemTitle
+
+          });
+    case 'SAVE_NOTES':
+      return Object.assign(
+          {},
+          state,{
+            notes: action.payload.notes
+
+          });
+    case 'SAVE_DESCRIPTION':
+      return Object.assign(
+          {},
+          state,{
+            description: action.payload.description
+
+          });
+    case 'SAVE_PROMPT':
+      return Object.assign(
+          {},
+          state,{
+            prompt: action.payload.prompt
 
           });
     default:

@@ -25,6 +25,9 @@ class ConfirmationPage extends Component {
           difficulty_id: parseInt(this.props.state.contributor.contributorSkillId),
           language_id: parseInt(this.props.state.contributor.contributorLanguage),
           category_id: parseInt(this.props.state.contributor.contributorCategoryId),
+          prompt: parseInt(this.props.state.contributor.prompt),
+          notes: parseInt(this.props.state.contributor.notes),
+          description: parseInt(this.props.state.contributor.description),
           contributor_id: 1
         }
       })
@@ -37,19 +40,28 @@ class ConfirmationPage extends Component {
       type:'RESET'
     }))
   }
-
+  quizCheck = () => {
+    debugger
+    const quizText = this.props.state.contributor.contributorQuizJSON
+    debugger
+    if (typeof quizText === "string") {
+      return JSON.parse(quizText)
+    }
+    else {
+      return quizText}
+  }
   render(){
   return(<>
 
     <div className="confirmationPage">
       <h1>Thanks for submitting your problem! This is what your code and quiz will look like. Take a look!</h1>
       <div className="redux-code">
-        <h3>Code</h3>
         <ConfirmationEditor code={this.props.state.contributor.contributorCode}/>
       </div>
       <div className="redux-quiz">
         <h2>Quiz</h2>
-        <Quiz quiz={JSON.parse(this.props.state.contributor.contributorQuizJSON)} />
+
+        <Quiz quiz={this.quizCheck()} />
       </div>
       <div className="contributorSubmitButton">
       <button className="ui red button, big ui button" id={1} onClick={(event)=>this.submitProblemToBackend(event)}>Confirm</button>

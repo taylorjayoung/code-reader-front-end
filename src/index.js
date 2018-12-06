@@ -9,9 +9,10 @@ import rootReducer from './reducers/reducer'
 import thunk from 'redux-thunk'
 import $ from 'jquery';
 import FirstStateContainer from './FirstStateContainer'
+import logger from 'redux-logger'
 
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
 
 ReactDOM.render(
