@@ -9,7 +9,6 @@ class ConfirmationPage extends Component {
     debugger
   }
   submitProblemToBackend = (event) => {
-    debugger
     event.preventDefault()
     fetch('http://localhost:3001/api/v1/problems', {
       method: 'POST',
@@ -19,15 +18,15 @@ class ConfirmationPage extends Component {
       },
       body: JSON.stringify({
         problem: {
-          code: this.props.state.contributor.contributorCode,
-          quiz: this.props.state.contributor.contributorQuizJSON,
+          code: JSON.stringify(this.props.state.contributor.contributorCode),
+          quiz: JSON.stringify(this.props.state.contributor.contributorQuizJSON),
           title: this.props.state.contributor.problemTitle,
           difficulty_id: parseInt(this.props.state.contributor.contributorSkillId),
           language_id: parseInt(this.props.state.contributor.contributorLanguage),
           category_id: parseInt(this.props.state.contributor.contributorCategoryId),
-          prompt: parseInt(this.props.state.contributor.prompt),
-          notes: parseInt(this.props.state.contributor.notes),
-          description: parseInt(this.props.state.contributor.description),
+          prompt: this.props.state.contributor.prompt,
+          notes: this.props.state.contributor.notes,
+          description: this.props.state.contributor.description,
           contributor_id: 1
         }
       })
@@ -41,14 +40,12 @@ class ConfirmationPage extends Component {
     }))
   }
   quizCheck = () => {
-    debugger
     const quizText = this.props.state.contributor.contributorQuizJSON
-    debugger
     if (typeof quizText === "string") {
-      return JSON.parse(quizText)
+      return quizText
     }
     else {
-      return quizText}
+      return JSON.stringify(quizText)}
   }
   render(){
   return(<>
@@ -61,7 +58,7 @@ class ConfirmationPage extends Component {
       <div className="redux-quiz">
         <h2>Quiz</h2>
 
-        <Quiz quiz={this.quizCheck()} />
+        <Quiz quiz={JSON.parse(this.quizCheck())} />
       </div>
       <div className="contributorSubmitButton">
       <button className="ui red button, big ui button" id={1} onClick={(event)=>this.submitProblemToBackend(event)}>Confirm</button>

@@ -53,8 +53,7 @@ code {
   font-size: 80px;
   color: grey;
   width: 220px;
-  margin-left: -250px;
-
+  margin-left: -265px;
 }
 
 .ui-inverted-primary-button{
@@ -63,7 +62,7 @@ code {
 }
 
 .main-title {
-  font-size: 80px;
+  font-size: 100px;
   margin-left: -650px;
   text-align: center;
   font-family: "Ubuntu", sans-serif;
@@ -72,7 +71,8 @@ code {
 .sub-title {
   font-family: "Ubuntu", sans-serif;
   position: relative;
-  margin-left: 85px;
+  font-size: 40px;
+  margin-left: 30px;
 }
 
 .home {
@@ -81,7 +81,7 @@ code {
   color: white;
   width: 1000px;
   position: fixed;
-   top: 50%;
+   top: 40%;
    left: 50%;
    margin-top: -150px;
    margin-left: -210px;
@@ -126,33 +126,40 @@ code {
   max-width: 1000px;
 
 }
+#contributor-button{
+  position: absolute;
+  width: 270px;
+  margin-left: 1400px;
+  margin-top: 1060px;
+}
 
 .welcomeTextParent{
   color: lightblue;
   font-family: 'Arvo', serif;
-
+  margin-top: -230px;
 }
 
 .ui-inverted-segment{
   background: #1B1C1D;
 }
 .ui.segment {
-  margin-left: 35px;
+  margin-left: 33px;
 }
 
 .buttonTerminalParent {
   position: fixed;
   height: 100%;
-  width: 250px;
+  width: 330px;
   margin-bottom: 50;
   margin-left: 125;
+  padding-left: 50px;
 }
 
 
 .buttonTerminalChild {
   position: relative;
   height: 100px;
-  padding-left: -15px;
+  margin-left: -19px;
   padding-top: 30px;
 }
 
@@ -202,6 +209,9 @@ code {
   z-index: 1;
   overflow-y: auto;
 
+}
+.ProblemListContainer {
+  height: 100%
 }
 
 .quizContainer {
@@ -278,8 +288,10 @@ article {
 
 #contributorTextChild {
   position: relative;
-  max-width: 650px;
+  max-width: 1050px;
+  font-size: 30px;
 }
+
 
 .item {
 
@@ -343,4 +355,8 @@ article {
   height: 46%;
   width: 65%;
   position: fixed;
+}
+
+#contributorHeader {
+  font-size: 40px;
 }

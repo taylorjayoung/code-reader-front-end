@@ -56,16 +56,17 @@ logoSelector = (event) => {
       payload: data});
   }
   else if (this.props.state.display.selectedUserType === "2"){
-
+    event.preventDefault()
     if(event.target.style.backgroundColor !== ""){
       event.target.style.backgroundColor = ""
     }
     else {
        event.target.style.backgroundColor = 'rgb(44,133,207)'
+
     }
 
     event.target.style.borderRadius = '5px'
-    event.target.style.width = '200px'
+    event.target.style.width = '300px'
     const data = {
       readInstructions: true,
       contributorLanguage: event.target.id
@@ -79,8 +80,8 @@ logoSelector = (event) => {
 
   render() {
     return (
-      <div className= 'logo-container' id={this.props.id} onClick={this.props.clickHandler ? this.props.clickHandler : (event) => this.logoSelector(event)}>
-        <svg className ="item"  pointerEvents="none" id={this.props.id}viewBox="0 0 128 128" width='120px' height='120px' >
+      <div className='logo-container' id={this.props.id} onClick={this.props.clickHandler ? this.props.clickHandler : (event) => this.logoSelector(event)} >
+        <svg className ="item"  pointerEvents="none" id={this.props.id}viewBox="0 0 128 128" width='100px' height='100px' >
           {this.pathFinder()}
         </svg>
         <p className='logo-title' >{this.props.name}</p>
