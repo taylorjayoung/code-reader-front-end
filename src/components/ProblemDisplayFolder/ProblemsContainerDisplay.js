@@ -19,10 +19,13 @@ class ProblemsContainerDisplay extends Component {
   }
 
   displayProblems = () => {
+    
     const categories = this.props.state.category.categories
     const language = this.props.state.language.selectedLanguage
+    
     const problemMatches = this.props.state.problems.problems.filter( problem => {
-      return problem.language_id === parseInt(language)
+      
+      return problem.language_id === parseInt(language) && problem.title.toLowerCase().includes(this.props.state.display.searchTerm.toLowerCase())
     })
 
     return problemMatches.map(problem =>{
@@ -59,6 +62,17 @@ class ProblemsContainerDisplay extends Component {
     })
   }
 
+  searchHandler = (event) => {
+    event.preventDefault()
+    const data = {
+      searchTerm: event.target.value
+    }
+
+    this.props.dispatch({
+     type: 'SAVE_SEARCH',
+     payload: data
+   })
+  }
 
   render() {
     return (
@@ -77,7 +91,7 @@ class ProblemsContainerDisplay extends Component {
           <div className="right menu">
             <div className="item">
               <div className="ui icon input">
-                <input type="text" placeholder="Search..." />
+                <input type="text" placeholder="Search..." onChange={(event) =>this.searchHandler(event)} />
                 <i className="search link icon"></i>
               </div>
             </div>

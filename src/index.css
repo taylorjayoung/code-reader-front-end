@@ -385,8 +385,8 @@ article {
         top: 15px;
         right: 20px;
         padding: 0;
-        width: 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
         cursor: pointer;
         outline: none;
         text-align: center;
@@ -426,7 +426,7 @@ article {
         border: 1px solid #666;
         text-align: center;
         display: inline-block;
-        font-size: 12px;
+        font-size: 17px;
         font-weight: 400;
         color: #333;
         background: transparent;
@@ -470,7 +470,7 @@ article {
 
             .mm-popup__box__header__title {
                 margin: 0;
-                font-size: 16px;
+                font-size: 20px;
                 text-align: left;
                 font-weight: 600;
             }
@@ -478,7 +478,7 @@ article {
         .mm-popup__box__body {
             padding: 20px;
             line-height: 1.4;
-            font-size: 14px;
+            font-size: 20px;
             color: #454B4D;
             background: #fff;
             position: relative;
