@@ -42,6 +42,7 @@
   ],
   "devDependencies": {
     "case-sensitive-paths-webpack-plugin": "^2.1.2",
+    "grunt": "^1.0.3",
     "gulp-build": "^0.5.3",
     "gulp-install": "^1.1.0",
     "restart": "^2.0.0",

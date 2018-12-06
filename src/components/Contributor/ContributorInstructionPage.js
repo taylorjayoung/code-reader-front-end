@@ -31,7 +31,7 @@ class ContributorInstructionPage extends Component {
       <WelcomeContributor />
     </div>
     <div className='submit-a-problem'>
-      <button className="ui primary button, medium ui button, contributor language button" id={1} onClick={(event)=>this.createProblem(event)}>Submit A Problem</button>
+      <button className="ui primary button, huge ui button, contributor language button" id='contributor-button' onClick={(event)=>this.createProblem(event)}>Submit A Problem</button>
     </div>
     </div>
   < />)

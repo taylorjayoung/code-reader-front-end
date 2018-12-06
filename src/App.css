@@ -90,6 +90,7 @@ body {
 
 .logo-container {
   padding: 15px;
+
 }
 
 .logo-container:hover {
@@ -151,14 +152,14 @@ body {
   margin-left: -14px;
   padding: 40px;
   border-bottom: white 5px solid;
-  width: 255px;
+  width: 355px;
 }
 
 .categoryParentDiv {
   position: fixed;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 250px;
+  width: 350px;
   z-index: 1;
   border-bottom: 5px solid white;
   left: 8px;
@@ -166,7 +167,7 @@ body {
 
 .categoryChildDiv {
   position: relative;
-  width: 180px;
+  width: 280px;
   z-index: 1;
   margin-left: 33px;
   padding-top: 5px;
@@ -181,7 +182,7 @@ body {
 
 #selectedLanguageContainer {
   padding-bottom: 2px;
-  width: 250px;
+  width: 350px;
   border-right-style: solid;
   border-right: thick white;
   border-top: 5px solid white;
@@ -474,4 +475,47 @@ a.item {
   height: 200px;
   font-size: 20px;
 
+}
+
+#odometer {
+  height: 90px;
+  width: 450px;
+  font-size: 60px;
+  background-color: black;
+  margin-left: -40px;
+}
+
+#odometer-caption{
+  position: absolute;
+  font-size: 50px;
+  color: gray;
+  font-family: 'Amatic SC', cursive;
+  margin-left: 95px;
+  margin-top: -75px;
+}
+
+.text {
+  font-size: 20px;
+}
+
+
+.class {
+  font-family: 'Inconsolata', monospace;
+
+font-family: 'Charmonman', cursive;
+
+font-family: 'Indie Flower', cursive;
+font-family: 'Dokdo', cursive;
+font-family: 'Amatic SC', cursive;
+font-family: 'Comfortaa', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Boogaloo', cursive;
+}
+
+#learnerTextParent {
+  color: white;
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 100px;
 }
