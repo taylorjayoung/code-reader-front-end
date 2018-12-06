@@ -31,7 +31,6 @@ class Javascript extends Component {
     problemCode = () => {
       const problemIndex = this.props.state.problems.selectedProblem
       const problem = this.props.state.problems.problems[problemIndex -1]
-      debugger
       return problem.code
     }
 
