@@ -18,7 +18,7 @@ class ConfirmationPage extends Component {
       },
       body: JSON.stringify({
         problem: {
-          code: JSON.stringify(this.props.state.contributor.contributorCode),
+          code: String(this.props.state.contributor.contributorCode),
           quiz: JSON.stringify(this.props.state.contributor.contributorQuizJSON),
           title: this.props.state.contributor.problemTitle,
           difficulty_id: parseInt(this.props.state.contributor.contributorSkillId),
