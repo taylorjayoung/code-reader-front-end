@@ -69,6 +69,7 @@ class ContributorCodeEditor extends Component {
   }
   setPrompt = (event) => {
     event.preventDefault()
+    debugger
     this.props.dispatch({
       type:'SAVE_PROMPT',
       payload: {prompt: event.target.value}
