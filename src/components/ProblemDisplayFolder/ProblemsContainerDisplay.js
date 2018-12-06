@@ -21,7 +21,6 @@ class ProblemsContainerDisplay extends Component {
   displayProblems = () => {
     const categories = this.props.state.category.categories
     const language = this.props.state.language.selectedLanguage
-    debugger
     const problemMatches = this.props.state.problems.problems.filter( problem => {
       return problem.language_id === parseInt(language)
     })

@@ -31,10 +31,6 @@ class ConfirmationPage extends Component {
         }
       })
     }).then(response => response.json())
-    .then(response =>
-    {
-      debugger
-    })
     .then( r =>   this.props.dispatch({
       type:'RESET'
     }))
