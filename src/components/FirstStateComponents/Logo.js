@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Popup from 'react-popup';
 
 
 class Logo extends Component {
@@ -47,39 +46,34 @@ class Logo extends Component {
 
 logoSelector = (event) => {
   event.preventDefault()
-  if(event.target.id === "2"){
-    if(this.props.state.display.selectedUserType === "1"){
-      const data = {
-        selectedLanguage: event.target.id,
-        skillSelection: true
-      }
-      this.props.dispatch({
-        type:'SAVE_LANGUAGE_SELECTION',
-        payload: data});
+  if(this.props.state.display.selectedUserType === "1"){
+    const data = {
+      selectedLanguage: event.target.id,
+      skillSelection: true
     }
-    else if (this.props.state.display.selectedUserType === "2"){
-      event.preventDefault()
-      if(event.target.style.backgroundColor !== ""){
-        event.target.style.backgroundColor = ""
-      }
-      else {
-         event.target.style.backgroundColor = 'rgb(44,133,207)'
-
-      }
-
-      event.target.style.borderRadius = '5px'
-      event.target.style.width = '300px'
-      const data = {
-        readInstructions: true,
-        contributorLanguage: event.target.id
-      }
-      this.props.dispatch({
-        type:'SAVE_CONTRIBUTOR_LANGUAGE',
-        payload: data});
-      }
+    this.props.dispatch({
+      type:'SAVE_LANGUAGE_SELECTION',
+      payload: data});
+  }
+  else if (this.props.state.display.selectedUserType === "2"){
+    event.preventDefault()
+    if(event.target.style.backgroundColor !== ""){
+      event.target.style.backgroundColor = ""
     }
     else {
-      Popup.alert(`Thanks for trying to check out our ${this.props.name} path. Currently our only working path is Javascript! Take a look.` );
+       event.target.style.backgroundColor = 'rgb(44,133,207)'
+
+    }
+
+    event.target.style.borderRadius = '5px'
+    event.target.style.width = '300px'
+    const data = {
+      readInstructions: true,
+      contributorLanguage: event.target.id
+    }
+    this.props.dispatch({
+      type:'SAVE_CONTRIBUTOR_LANGUAGE',
+      payload: data});
     }
   }
 
@@ -87,7 +81,7 @@ logoSelector = (event) => {
   render() {
     return (
       <div className='logo-container' id={this.props.id} onClick={this.props.clickHandler ? this.props.clickHandler : (event) => this.logoSelector(event)} >
-        <svg className ="item"  pointerEvents="none" id={this.props.id}viewBox="0 0 128 128" width='100px' height='100px' >
+        <svg className ="item"  pointerEvents="none" id={this.props.id}viewBox="0 0 128 128" width='80px' height='80px' >
           {this.pathFinder()}
         </svg>
         <p className='logo-title' >{this.props.name}</p>

@@ -478,22 +478,7 @@ a.item {
 
 }
 
-#odometer {
-  height: 90px;
-  width: 450px;
-  font-size: 60px;
-  background-color: black;
-  margin-left: -40px;
-}
 
-#odometer-caption{
-  position: absolute;
-  font-size: 50px;
-  color: gray;
-  font-family: 'Amatic SC', cursive;
-  margin-left: 95px;
-  margin-top: -75px;
-}
 
 .text {
   font-size: 20px;
