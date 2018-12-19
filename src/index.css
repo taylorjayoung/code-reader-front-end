@@ -566,3 +566,23 @@ article {
         margin-top: 10px;
     }
 }
+
+
+.QuizFormMaster {
+  margin-left: 45%;
+  margin-top: 20%;
+}
+
+.practiceQuiz {
+  position: fixed;
+  margin-left: 57em;
+  margin-top: 37em;
+}
+
+.quizInfo {
+  position: absolute;
+  margin-top: 18em;
+  margin-left: 26em;
+  font-size: 20px;
+  text-align: center;
+}

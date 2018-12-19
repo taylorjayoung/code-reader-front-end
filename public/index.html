@@ -15,28 +15,24 @@
     @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Boogaloo|Charmonman|Comfortaa|Dokdo|Fredoka+One|Inconsolata|Indie+Flower|Monoton|Roboto+Mono');
     </style>
 
-    <!-- Extra styles for this example -->
+    <!-- Extra styles -->
 
-    <style>
-
+  <style>
     #toggle {
       width: 100px;
       height: 100px;
       background: #ccc;
     }
-    </style>
-    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
- <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  </style>
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.0/dist/semantic.min.css"></link>
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous">
+  </script>
 <link src="semantic/dist/semantic.min.js"></link>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -48,21 +44,9 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <link rel="stylesheet" src='./conditionalStyleSheet.css' media="screen and (max-width: 900px)"></link>
   </head>
   <body>
-
-    <script src="http://github.hubspot.com/odometer/odometer.js"></script>
-
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

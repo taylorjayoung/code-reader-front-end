@@ -3,10 +3,11 @@ import '../../App.css';
 import { connect } from 'react-redux';
 import ListComponent from './ListComponent'
 import ProblemDisplay from './ProblemDisplay'
+import Popup from 'react-popup';
 
 
 
-class ProblemsContainerDisplay extends Component {
+class ProblemsContainer extends Component {
 
   fetchProblems = () => {
 
@@ -19,12 +20,10 @@ class ProblemsContainerDisplay extends Component {
   }
 
   displayProblems = () => {
-    
     const categories = this.props.state.category.categories
     const language = this.props.state.language.selectedLanguage
-    
     const problemMatches = this.props.state.problems.problems.filter( problem => {
-      
+
       return problem.language_id === parseInt(language) && problem.title.toLowerCase().includes(this.props.state.display.searchTerm.toLowerCase())
     })
 
@@ -35,14 +34,12 @@ class ProblemsContainerDisplay extends Component {
 
 
 
-  languagesButtonHandler = (event) => {
+  buttonAlert = (event) => {
     event.preventDefault()
-    this.props.dispatch({
-      type: 'RESET'
-    }, () => {this.updateSelection()})
-
-
+    Popup.alert(`Thanks for trying to check out all of our features. Unfortunately this one isn't built out yet. Take a look at our problem list!`);
   }
+
+
   homeButtonHandler = (event) => {
     event.preventDefault()
       this.props.dispatch({
@@ -82,10 +79,10 @@ class ProblemsContainerDisplay extends Component {
           <a className="item" onClick={(event) => this.homeButtonHandler(event)}>
             Home
           </a>
-          <a className="item" onClick={(event) => this.languagesButtonHandler(event)}>
+          <a className="item" onClick={(event) => this.buttonAlert(event)}>
             Change Language
           </a>
-          <a className="item">
+          <a className="item" onClick={(event) => this.buttonAlert(event)} >
             Become an Author
           </a>
           <div className="right menu">
@@ -95,7 +92,7 @@ class ProblemsContainerDisplay extends Component {
                 <i className="search link icon"></i>
               </div>
             </div>
-            <a className="ui item">
+            <a className="ui item" onClick={(event) => this.buttonAlert(event)}>
               Login
             </a>
           </div>
@@ -118,4 +115,4 @@ let mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(ProblemsContainerDisplay);
+export default connect(mapStateToProps)(ProblemsContainer);

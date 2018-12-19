@@ -57,7 +57,7 @@ class ConfirmationPage extends Component {
         <Quiz quiz={JSON.parse(this.quizCheck())} />
       </div>
       <div className="contributorSubmitButton">
-      <button className="ui red button, big ui button" id={1} onClick={(event)=>this.submitProblemToBackend(event)}>Confirm</button>
+      <button className="ui red button, big ui button" id='contributor-confirm-button' onClick={(event)=>this.submitProblemToBackend(event)}>Confirm</button>
       </div>
     </div>
   < />)

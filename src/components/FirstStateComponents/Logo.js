@@ -79,7 +79,6 @@ logoSelector = (event) => {
       }
     }
     else {
-      debugger
       Popup.alert(`Thanks for trying to check out our ${this.props.name} path. Currently our only working path is Javascript! Take a look.` );
     }
   }
