@@ -10,7 +10,8 @@ class ConfirmationPage extends Component {
   }
   submitProblemToBackend = (event) => {
     event.preventDefault()
-    fetch('https://still-refuge-99143.herokuapp.com/api/v1/problems', {
+    // fetch('https://still-refuge-99143.herokuapp.com/api/v1/problems', {
+    fetch('http://localhost:3001/api/v1/problems', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -18,7 +19,7 @@ class ConfirmationPage extends Component {
       },
       body: JSON.stringify({
         problem: {
-          code: JSON.stringify(this.props.state.contributor.contributorCode),
+          code: String(this.props.state.contributor.contributorCode),
           quiz: JSON.stringify(this.props.state.contributor.contributorQuizJSON),
           title: this.props.state.contributor.problemTitle,
           difficulty_id: parseInt(this.props.state.contributor.contributorSkillId),
@@ -57,7 +58,7 @@ class ConfirmationPage extends Component {
         <Quiz quiz={JSON.parse(this.quizCheck())} />
       </div>
       <div className="contributorSubmitButton">
-      <button className="ui red button, big ui button" id={1} onClick={(event)=>this.submitProblemToBackend(event)}>Confirm</button>
+      <button className="ui red button, big ui button" id='contributor-confirm-button' onClick={(event)=>this.submitProblemToBackend(event)}>Confirm</button>
       </div>
     </div>
   < />)

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment}from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -10,6 +10,7 @@ import thunk from 'redux-thunk'
 import $ from 'jquery';
 import FirstStateContainer from './FirstStateContainer'
 import logger from 'redux-logger'
+import Popup from 'react-popup';
 
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
@@ -17,7 +18,10 @@ const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
 ReactDOM.render(
   <Provider store={store}>
+    <>
     <App />
+    <Popup />
+    < />
   </Provider>, document.getElementById('root')
 );
 

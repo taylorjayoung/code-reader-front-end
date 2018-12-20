@@ -9,6 +9,8 @@ import SkillCard from '../DropDownComponents/SkillCard'
 import { DropdownMenu, MenuItem } from 'react-bootstrap-dropdown-menu';
 import Logo from '../FirstStateComponents/Logo'
 import $ from 'jquery'
+import Popup from 'react-popup';
+
 
 class ContributorCodeEditor extends Component {
   state = {
@@ -21,15 +23,28 @@ class ContributorCodeEditor extends Component {
 
   submitState = (event)=> {
     event.preventDefault()
-    const data = {
-      readInstructions: false,
-      contributorCode: this.state.code,
-      submitProblem: false,
-      displayQuizForm: true
+    const code = this.state.code
+    const notes = this.props.state.contributor.notes
+    const title = this.props.state.contributor.problemTitle
+    const prompt = this.props.state.contributor.prompt
+    const description = this.props.state.contributor.description
+    const skill = this.props.state.contributor.contributorSkillId
+    const category = this.props.state.contributor.contributorCategoryId
+
+    if (code && notes && title && prompt && description && skill && category){
+      const data = {
+        readInstructions: false,
+        contributorCode: this.state.code,
+        submitProblem: false,
+        displayQuizForm: true
+      }
+      this.props.dispatch({
+        type:'SAVE_CONTRIBUTOR_CODE',
+        payload: data});
     }
-    this.props.dispatch({
-      type:'SAVE_CONTRIBUTOR_CODE',
-      payload: data});
+    else {
+      Popup.alert(`Please make sure you have pasted code in the editor and filled out each row of the form.` );
+    }
   }
 
   showLogo = () => {
@@ -102,7 +117,7 @@ class ContributorCodeEditor extends Component {
               <AceEditor
               mode="javascript"
               theme="twilight"
-              name="blah2"
+              name="blah3"
               onLoad={this.onLoad}
               onChange={this.getCode}
               value={this.state.code}

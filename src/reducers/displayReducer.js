@@ -6,6 +6,7 @@ const initialState = {
   selectedSkill: null,
   selectedCategories: {},
   selectedUserType: null,
+  searchTerm: ''
 }
 
 const displayReducer = (state = initialState, action) => {
@@ -23,6 +24,13 @@ const displayReducer = (state = initialState, action) => {
           {},
           state,{
           problemContainerDisplay: action.payload.problemContainerDisplay,
+          });
+          
+    case 'SAVE_SEARCH':
+      return Object.assign(
+          {},
+          state,{
+          searchTerm: action.payload.searchTerm,
           });
     default:
       return state;
