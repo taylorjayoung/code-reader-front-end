@@ -291,8 +291,9 @@ background-color: rgb(26,28,29);
 }
 
 .contributorSubmitButton {
-  right: 10%;
-  position: absolute;
+  position: relative;
+  margin-top: 100px;
+  margin-left: 1550px;
 }
 
 .problemDisplayDiv {
@@ -477,6 +478,10 @@ a.item {
 
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> pre-mvp
 
 .text {
   font-size: 20px;

@@ -21,6 +21,7 @@ class LogoContainer extends Component {
     }
 
     else return Object.keys(logoPathsObj).map(function(key, index) {
+
       return <Logo key={key} id={logoPathsObj[key]} name={key} />
     }.bind(this))
   }
