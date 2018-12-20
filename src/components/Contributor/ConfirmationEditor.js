@@ -17,7 +17,7 @@ class ConfirmationEditor extends Component {
             <AceEditor
             mode="javascript"
             theme="twilight"
-            name="blah2"
+            name="blah3"
             onLoad={this.onLoad}
             onChange={this.onChange}
             value={this.props.code}

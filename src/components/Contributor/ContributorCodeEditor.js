@@ -117,7 +117,7 @@ class ContributorCodeEditor extends Component {
               <AceEditor
               mode="javascript"
               theme="twilight"
-              name="blah2"
+              name="blah3"
               onLoad={this.onLoad}
               onChange={this.getCode}
               value={this.state.code}

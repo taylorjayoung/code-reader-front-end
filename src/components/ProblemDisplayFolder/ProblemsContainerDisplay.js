@@ -10,12 +10,9 @@ class ProblemsContainerDisplay extends Component {
 
   fetchProblems = () => {
 
-<<<<<<< HEAD
-    // fetch('https://still-refuge-99143.herokuapp.com/api/v1/problems')
     fetch('http://localhost:3001/api/v1/problems')
-=======
-    fetch('https://still-refuge-99143.herokuapp.com/api/v1/problems')
->>>>>>> pre-mvp
+//     fetch('https://still-refuge-99143.herokuapp.com/api/v1/problems')
+// >>>>>>> pre-mvp
     .then(r => r.json())
     .then(r => this.props.dispatch({
             type:'FETCH_PROBLEMS',
@@ -73,12 +70,7 @@ class ProblemsContainerDisplay extends Component {
           <a className="item" onClick={(event) => this.homeButtonHandler(event)}>
             Home
           </a>
-          <a className="item" onClick={(event) => this.languagesButtonHandler(event)}>
-            Change Language
-          </a>
-          <a className="item">
-            Become an Author
-          </a>
+
           <div className="right menu">
             <div className="item">
               <div className="ui icon input">

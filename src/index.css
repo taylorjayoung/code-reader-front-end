@@ -129,14 +129,15 @@ code {
 #contributor-button{
   position: absolute;
   width: 270px;
-  margin-left: 1400px;
-  margin-top: 1060px;
+  margin-left: 1100px;
+  margin-top: 600px;
 }
 
 .welcomeTextParent{
   color: lightblue;
   font-family: 'Arvo', serif;
-  margin-top: -230px;
+  margin-top: -130px;
+  margin-right: 45px;
 }
 
 .ui-inverted-segment{
@@ -186,14 +187,12 @@ code {
 
 .problemFieldParent {
   background-color: rgba(255, 255, 255, 0.9);
-  position: fixed;
+  position: absolute;
   padding: 5px;
   width: 68%;
   height: 100%;
-  z-index: 1;
   top: 0;
-  margin-left: 600px;
-  margin-top: 5.2%;
+  margin-left: 500px;
 
 }
 
@@ -289,7 +288,7 @@ article {
 #contributorTextChild {
   position: relative;
   max-width: 1050px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 
@@ -346,15 +345,13 @@ article {
   margin-right: 2%;
 }
 
-#problemEditor {
-  height: 100%;
-  width: 100%;
-}
+
 
 .problemFieldChild {
-  height: 46%;
+  height: 100%;
   width: 65%;
   position: fixed;
+  background-color: black;
 }
 
 #contributorHeader {
@@ -569,7 +566,7 @@ article {
 
 
 .QuizFormMaster {
-  margin-left: 45%;
+  margin-left: 15%;
   margin-top: 20%;
 }
 
@@ -583,6 +580,5 @@ article {
   position: absolute;
   margin-top: 18em;
   margin-left: 26em;
-  font-size: 20px;
   text-align: center;
 }

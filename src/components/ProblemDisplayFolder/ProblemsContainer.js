@@ -79,12 +79,6 @@ class ProblemsContainer extends Component {
           <a className="item" onClick={(event) => this.homeButtonHandler(event)}>
             Home
           </a>
-          <a className="item" onClick={(event) => this.buttonAlert(event)}>
-            Change Language
-          </a>
-          <a className="item" onClick={(event) => this.buttonAlert(event)} >
-            Become an Author
-          </a>
           <div className="right menu">
             <div className="item">
               <div className="ui icon input">
