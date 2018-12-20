@@ -80,7 +80,7 @@ logoSelector = (event) => {
 
   render() {
     return (
-      <div className='logo-container' id={this.props.id} onClick={this.props.clickHandler ? this.props.clickHandler : (event) => this.logoSelector(event)} >
+      <div className='logo-container' id={this.props.id} onClick={this.props.clickHandler ? this.props.clickHandler() : (event) => this.logoSelector(event)} >
         <svg className ="item"  pointerEvents="none" id={this.props.id}viewBox="0 0 128 128" width='80px' height='80px' >
           {this.pathFinder()}
         </svg>

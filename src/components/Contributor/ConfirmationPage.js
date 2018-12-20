@@ -10,7 +10,8 @@ class ConfirmationPage extends Component {
   }
   submitProblemToBackend = (event) => {
     event.preventDefault()
-    fetch('https://still-refuge-99143.herokuapp.com/api/v1/problems', {
+    // fetch('https://still-refuge-99143.herokuapp.com/api/v1/problems', {
+    fetch('http://localhost:3001/api/v1/problems', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
