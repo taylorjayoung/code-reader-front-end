@@ -40,14 +40,16 @@ class QuizFormMaster extends Component {
         type:'QUIZ_SUBMITTED',
         payload: data});
   }
+ //  <QuizForm onSubmit={this.setResult} />
+//  <br></br>
+//<QuizFormResult result={this.state.result}/>
 
   render() {
     return (
       <div className="QuizFormMaster">
-       	<QuizForm onSubmit={this.setResult} />
-        <br></br>
+
         <button className="ui primary button, medium ui button" id={2} onClick={(event)=>this.autofillQuiz(event)}>Autofill Default Quiz</button>
-       	<QuizFormResult result={this.state.result}/>
+
       </div>
     );
   }
