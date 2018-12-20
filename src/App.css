@@ -198,11 +198,14 @@ body {
 }
 
 .ProblemContainer {
- width: 100%;
+ width: 80%;
  height: 100%;
+ left: 0;
  position: fixed;
  border: 10px white solid;
  border-radius: 3px;
+ margin-top: -10px;
+ right: 0;
 background-color: rgb(26,28,29);
 }
 
@@ -210,9 +213,10 @@ background-color: rgb(26,28,29);
 
 #blah2 {
   position: absolute;
-  height: 130% !important;
-  width: 100% !important;
+  height: 90% !important;
+  width: 120% !important;
   border-radius: 10px;
+  margin-left: -100px;
 }
 
 #blah3 {
