@@ -1,5 +1,5 @@
 import React from 'react';
-import ModalWrapper from './ModalWrapper.jsx';
+import ModalWrapper from './ModalWrapper.js';
 
 const NoLanguageSelectedModal = (props) => {
   const signIn = provider => {

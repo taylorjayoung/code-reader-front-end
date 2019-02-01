@@ -3,7 +3,7 @@ import NavBar from '../FirstStateComponents/NavBar'
 import WelcomeContributor from '../FirstStateComponents/WelcomeContributor'
 import LogoContainer from '../FirstStateComponents/LogoContainer'
 import { connect } from 'react-redux';
-import NoLanguageSelectedModal from '../ModalConductor/NoLanguageSelected'
+import NoLanguageSelectedModal from './Modal'
 
 class ContributorInstructionPage extends Component {
   createProblem = (event) => {
