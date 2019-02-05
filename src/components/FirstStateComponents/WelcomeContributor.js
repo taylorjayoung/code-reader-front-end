@@ -4,9 +4,6 @@ import '../../App.css';
 
 
 class WelcomeContributor extends Component {
-  print = () => {
-    {console.log('Contribute')}
-  }
 
   render() {
     return (

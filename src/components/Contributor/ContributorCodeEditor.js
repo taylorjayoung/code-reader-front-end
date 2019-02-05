@@ -80,7 +80,7 @@ class ContributorCodeEditor extends Component {
     this.props.dispatch({
       type:'SAVE_NOTES',
       payload: {notes: event.target.value}
-    }, ()=> console.log(event.target.value));
+    });
   }
   setPrompt = (event) => {
     event.preventDefault()
@@ -94,7 +94,7 @@ class ContributorCodeEditor extends Component {
     this.props.dispatch({
       type:'SAVE_DESCRIPTION',
       payload: {description: event.target.value}
-    }, ()=> console.log(event.target.value));
+    });
   }
 
   // <div className="ui input" onChange={event => this.setDescription(event)}>
