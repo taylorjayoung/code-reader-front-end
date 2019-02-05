@@ -11,8 +11,6 @@ class QuizComponent extends Component {
     if(this.props.state.quiz.renderQuizDirectoryButtons){
       return(
         <>
-        <button className="ui red button, small ui button" id={1} onClick={(event)=>this.takeQuiz(event)}>Start Over</button>
-        <button className="ui blue button, small ui button" id={2} onClick={(event)=>this.takeQuiz(event)}>Next Problem</button>
         < />
       )
     }
