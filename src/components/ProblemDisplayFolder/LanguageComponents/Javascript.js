@@ -30,8 +30,8 @@ class Javascript extends Component {
 
     problemCode = () => {
       const problemIndex = this.props.state.problems.selectedProblem
-      const problem = this.props.state.problems.problems.filter(p => p.id === problemIndex)
-      return problem.code
+      const problem = this.props.state.problems.problems.filter(p => p.id === problemIndex) 
+      return problem[0].code
     }
 
     goToProblemContainer = (event) => {
