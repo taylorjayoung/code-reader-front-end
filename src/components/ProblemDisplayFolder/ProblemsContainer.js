@@ -15,7 +15,7 @@ class ProblemsContainer extends Component {
     .then(r => r.json())
     .then(r => this.props.dispatch({
             type:'FETCH_PROBLEMS',
-            payload: {problems: r}})
+            payload: {problems: r}, console.log(r)})
           )
   }
 
