@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 import '../../App.css';
 import Select from 'react-select';
 import Animated from 'react-select/lib/animated';
@@ -22,13 +22,14 @@ class Categories extends Component {
 
   render() {
     return (
+      <>
       <div className='categoryParentDiv'>
         <div className='categoryChildDiv'>
           <CategorySelector selector={this.categorySetter}/>
         </div>
-        {this.props.state.category.submitButton ? <SubmitButton /> : null}
-
       </div>
+     {this.props.state.category.submitButton ? <SubmitButton /> : null}
+      < />
     );
   }
 }

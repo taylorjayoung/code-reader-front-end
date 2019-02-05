@@ -16,7 +16,6 @@ class ProblemDisplay extends Component {
     const lang  = languagesArray[languageIndex][languageIndex]
     if (lang === "Javascript")
     {
-      debugger
       return  <Javascript /> }
     else { return <Ruby />  }
   }

@@ -14,12 +14,10 @@ class FirstStateContainer extends Component {
     return(
       <>
       <NavBar />
-      <div className="FirstStateContainer">
+      <div className="logo-container-div">
         {this.props.state.display.logoSelection ? <LogoContainer /> : null}
       </div>
-      <div>
         {this.props.state.display.logoSelection ? <InstructionDisplay /> : null}
-      </div>
       <div className="welcome">
          {this.props.state.display.selectedUserType === '1' ? <WelcomeLearner /> : <WelcomeContributor />}
       </div>

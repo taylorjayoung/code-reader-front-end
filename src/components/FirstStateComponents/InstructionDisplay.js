@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React, {Fragment, Component } from 'react';
 import { connect } from 'react-redux';
-import SubmitButton from './SubmitButton'
 
 
 class InstructionDisplay extends Component {
@@ -25,11 +24,9 @@ class InstructionDisplay extends Component {
 
   render() {
     return (
-      <div className='mover' >
-        <div className='titleDiv'>
+        <div className="instruction-div">
           {this.displayFinder(this.props)}
         </div>
-      </div>
     );
   }
 }

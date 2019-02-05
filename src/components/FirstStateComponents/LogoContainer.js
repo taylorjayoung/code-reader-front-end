@@ -14,7 +14,7 @@ class LogoContainer extends Component {
       const idv = Object.keys(language)[0]
       return (
         <div id='selectedLanguageContainer'>
-        <Logo key={idv} id={idv} name={language[idv]} />
+         <Logo key={idv} id={idv} name={language[idv]} />
         {this.props.state.language.skillSelection ? <Skill />: null}
         </div>
       )
@@ -43,3 +43,5 @@ let mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(LogoContainer);
+
+

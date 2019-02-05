@@ -3,12 +3,9 @@ body {
   z-index: -5;
 }
 
-.FirstStateContainer {
-  text-align: center;
-  background-color: rgb(26,28,29);
-  border: 10px white solid;
+.logo-container-div {  
+  border: 3px white solid;
   border-radius: 3px;
-  width: 100%;
   height: 100%;
   position: absolute;
   top:0;
@@ -24,23 +21,16 @@ body {
 }
 
 .first-state-logo-container {
-  display: flex;
-  float: left;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
   height: 100%;
-  width: 350px;
+  width: 330px;
   overflow-y: auto;
   border: solid white;
   border-width: 0 5px;
 }
 
 #contributor-logo-container {
-  position: absolute;
-  height: 89%;
-  overflow-y: auto;
+  height: 100%;
+  background: rgb(156, 36, 36);
 }
 
 .item {
@@ -157,26 +147,33 @@ body {
   margin-left: -14px;
   padding: 40px;
   border-bottom: white 5px solid;
-  width: 355px;
+  width: 335px;
 }
 
 .categoryParentDiv {
   position: fixed;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 350px;
+  justify-content: center;
+  width: 320px;
   z-index: 1;
   border-bottom: 5px solid white;
   left: 8px;
 }
 
 .categoryChildDiv {
-  position: relative;
-  width: 280px;
+  display: flex;
+  width: 320px;
   z-index: 1;
-  margin-left: 33px;
-  padding-top: 5px;
-  padding-bottom: 30px;
+  float: left;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+
+}
+
+.categoryChildDiv div{
+  width: 200px;
 }
 
  .list-group-item:hover {
@@ -343,22 +340,8 @@ background-color: rgb(26,28,29);
   background-color: red;
 }
 
-.submit-a-problem {
-  position: absolute;
-  height: 5%;
-}
-
-#contributor-logo-container{
-  background-color: white;
-}
-
 .contributorInstructionsPage{
   background-color:white;
-}
-.contributor.language.button {
-  position: relative;
-  margin-top: 700px;
-  margin-left: 1130px;
 }
 
 #dropdownDiv{

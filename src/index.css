@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-
+height: 1vw;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -27,34 +27,12 @@ code {
   margin: 20px;
 }
 
-.titles.language {
-  position: absolute;
+.titles {
+  display: block;
   font-family: 'Arvo', serif;
-  font-size: 80px;
+  font-size: 4vw;
   color: grey;
-  width: 220px;
-  margin-left: -250px;
-
-}
-.titles.skill{
-  position: absolute;
-  font-family: 'Arvo', serif;
-  font-size: 70px;
-  color: grey;
-  width: 220px;
-  margin-left: -170px;
   text-align: center;
-
-
-}
-.titles.categories{
-  position: absolute;
-  font-family: 'Arvo', serif;
-  text-align: center;
-  font-size: 80px;
-  color: grey;
-  width: 220px;
-  margin-left: -265px;
 }
 
 .ui-inverted-primary-button{
@@ -63,13 +41,14 @@ code {
 }
 
 .homeContainer {
+  margin-top: 15%;
   
-}
+  }
 
 
 .main-title {
   margin-top: 10%;
-  font-size: 15vw;
+  font-size: 12vw;
   font-family: "Ubuntu", sans-serif;
   text-align: center;
   color: white;
@@ -93,44 +72,58 @@ code {
   text-align: center;
 }
 
-.text {
-  font-size: 18px;
-}
 
-
-.mover {
-  position: fixed;
-  width: 380px;
-  margin-left: 450px;
-  padding: 5px;
+.instruction-div{
   height: 100%;
-  border-right: solid white 5px;
-
+  margin-top: 200px;
+  margin-left: 350px;
+  width: 300px;
+  position: fixed;
 }
 
 .welcome {
   position: fixed;
   float: right;
-  margin-left: 890px;
-  margin-top: 50px;
+  margin-left: 690px;
   height: 100%;
   margin-right: 5px;
   padding-right: 5px;
-  max-width: 1000px;
-
+  border-left: white 5px solid;
 }
+
 #contributor-button{
-  position: absolute;
-  width: 270px;
-  margin-left: 1100px;
-  margin-top: 600px;
+  position: fixed;
+  bottom: 5%;
+  margin-left: 900px;
+}
+
+.submit-a-problem {
+  position: fixed;
+  height: 15%;
+  width: 15%;
+  top: 70%;
+} 
+
+.contributorPage{
+  position: fixed;
+}
+
+.contributorInstructionsPage {
+  position: fixed;
+}
+
+#contributor-welcome-message-container{
+  position: fixed;
+  min-width: 800px;
+  overflow: scroll; 
+
+
 }
 
 .welcomeTextParent{
   color: lightblue;
   font-family: 'Arvo', serif;
-  margin-top: -130px;
-  margin-right: 45px;
+  position: fixed;
 }
 
 .ui.inverted.segment{
@@ -141,19 +134,17 @@ code {
 
 .buttonTerminalParent {
   position: fixed;
+  bottom: 0;
   height: 100%;
   width: 330px;
-  margin-bottom: 50;
-  margin-left: 125;
-  padding-left: 50px;
 }
 
 
 .buttonTerminalChild {
-  position: relative;
+  position: absolute;
+  margin-left: 20%;
+  bottom: 0;
   height: 100px;
-  margin-left: -19px;
-  padding-top: 30px;
 }
 
 .promptText{
@@ -265,23 +256,28 @@ article {
 }
 
 #contributorTextParent {
-  position: absolute;
-  left: 30%;
-  top: 30%;
+  position: fixed;
+  top: 10%;
+  margin-left: 400px;
   color: black;
 }
 
-.contributor.language.button{
-  position: relative;
-  margin-top: 560px;
-  margin-left: 570px;
-}
+
 
 #contributorTextChild {
   position: relative;
   max-width: 1050px;
   font-size: 20px;
 }
+#contributorTextChild h1 {
+  text-align: center;
+}
+
+#contributorTextChild p {
+      text-align: center;
+  }
+
+
 
 
 .item {

@@ -24,15 +24,13 @@ class ContributorInstructionPage extends Component {
 
   return(<>
     <div className="contributorInstructionsPage">
-    <div id='contributor-logo-container'>
-      <LogoContainer />
-    </div>
-    <div id='contributor-welcome-message-container'>
-      <WelcomeContributor />
-    </div>
-    <div className='submit-a-problem'>
-      <button className="ui primary button, huge ui button, contributor language button" id='contributor-button' onClick={(event)=>this.createProblem(event)}>Submit A Problem</button>
-    </div>
+      <div id='contributor-logo-container'>
+        <LogoContainer />
+      </div>
+        <WelcomeContributor />
+      <div className='submit-a-problem'>
+        <button className="ui primary button, huge ui button, contributor language button" id='contributor-button' onClick={(event)=>this.createProblem(event)}>Submit A Problem</button>
+      </div>
     </div>
   < />)
   }

@@ -5,13 +5,10 @@ import ConfirmationEditor from './ConfirmationEditor'
 import { Button, Segment } from 'semantic-ui-react'
 
 class ConfirmationPage extends Component {
-   setResult = () => {
-    debugger
-  }
   submitProblemToBackend = (event) => {
     event.preventDefault()
     // fetch('https://still-refuge-99143.herokuapp.com/api/v1/problems', {
-    fetch('http://localhost:3001/api/v1/problems', {
+    fetch('http://localhost:8000/api/v1/problems', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

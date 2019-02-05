@@ -9,7 +9,10 @@ import { connect } from 'react-redux';
 
 class App extends Component {
   display = () => {
-    return this.props.state.display.selectedUserType === '1' ?  <FirstStateContainer /> : <Contributor />
+    if(this.props.state.display.selectedUserType === '1'){
+      return <FirstStateContainer />
+    }
+    return <Contributor />
   }
 
   render() {
@@ -26,5 +29,6 @@ const mapStateToProps = (state) => {
     state
   }
 }
+
 
 export default connect(mapStateToProps)(App);

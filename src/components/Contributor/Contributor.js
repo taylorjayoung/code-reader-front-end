@@ -10,9 +10,6 @@ import { connect } from 'react-redux';
 
 
 class Contributor extends Component {
-   setResult = () => {
-    debugger
-  }
   render(){
   return(<>
     <div className="contributorPage">

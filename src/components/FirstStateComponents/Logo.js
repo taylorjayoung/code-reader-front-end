@@ -47,7 +47,6 @@ class Logo extends Component {
 
 logoSelector = (event) => {
   event.preventDefault()
-  debugger
   if(event.target.id ==="2"){
     if(this.props.state.display.selectedUserType === "1"){
         const data = {

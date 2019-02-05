@@ -11,7 +11,7 @@ class ProblemsContainer extends Component {
 
   fetchProblems = () => {
 
-    fetch('http://localhost:3001/api/v1/problems')
+    fetch('http://localhost:8000/api/v1/problems')
     .then(r => r.json())
     .then(r => this.props.dispatch({
             type:'FETCH_PROBLEMS',
@@ -86,9 +86,6 @@ class ProblemsContainer extends Component {
                 <i className="search link icon"></i>
               </div>
             </div>
-            <a className="ui item" onClick={(event) => this.buttonAlert(event)}>
-              Login
-            </a>
           </div>
         </div>
       </div>
