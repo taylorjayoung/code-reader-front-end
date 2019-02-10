@@ -11,8 +11,8 @@ class ProblemsContainer extends Component {
 
   fetchProblems = () => {
 
-    // fetch('https://still-refuge-99143.herokuapp.com/api/v1/problems')
-    fetch('http://localhost:8000/api/v1/problems')
+    fetch('https://still-refuge-99143.herokuapp.com/api/v1/problems')
+    // fetch('http://localhost:8000/api/v1/problems')
     .then(r => r.json())
     .then(r => this.props.dispatch({
             type:'FETCH_PROBLEMS',
