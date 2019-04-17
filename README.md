@@ -1,4 +1,4 @@
-# <h1 align='center'> Bitbook Frontend <h1>
+# <h1 align='center'> Bitbook <h1>
 
 The idea of this application is to have a learning platform that allows users to practice reading code and solving problems within a context. This is a beta version. The code samples are arbitrary and quizzes are arbitrary, and the only supported language is Javascript. It is my hope that a platform like this will be developed and that this could at least serve as a template for such a platform.
 
